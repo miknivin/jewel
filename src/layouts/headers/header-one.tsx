@@ -82,13 +82,13 @@ const HeaderOne = ({ hasTopBar, hasTopBarTwo, headerClass }: HeaderProps) => {
                 </div>
                 <div className="col-xl-3 col-lg-6 col-md-6 col-6">
                   <div className="it-header-bottom-right d-flex align-items-center justify-content-end">
-                    <div className="it-header-bottom-right-shop d-none d-md-block">
+                    {/* <div className="it-header-bottom-right-shop d-none d-md-block">
                       <Link href="/cart">
                         <span>
                           <CartSvg />
                         </span>
                       </Link>
-                    </div>
+                    </div> */}
                     <div className="it-header-bottom-right-button ml-30">
                       <Link href="/contact" className="it-btn-primary">
                         Contact Us

@@ -62,9 +62,9 @@ const DestinationOne = () => {
         <div className="row justify-content-center">
           <div className="col-xl-7 col-lg-8">
             <div className="it-destination-title-box text-center mb-75">
-              <span className="it-section-subtitle">Top Destinations</span>
+              <span className="it-section-subtitle">Explore Top Destinations</span>
               <h3 className="it-section-title">
-                Explore the Beautiful Places Around the World
+                Your journey begins where the ordinary ends
               </h3>
             </div>
           </div>

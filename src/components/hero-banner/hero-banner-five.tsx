@@ -18,19 +18,18 @@ const HeroBannerFive = () => {
                   data-aos="fade-up"
                   data-aos-duration="800"
                 >
-                  Hi there-----
+                  Create Lifetime Memories
                 </span>
                 <h3
                   className="it-slider-title text-black mb-20"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                 >
-                  Discover The Best Lovely Places
+                  Explore Beyond with <br />
+                  <span className=''>Skyfall Jewel</span> 
                 </h3>
                 <p data-aos="fade-up" data-aos-duration="1200">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                  minim veniam,
+                Embark on unforgettable journeys with Skyfall Jewel, your gateway to adventure. Explore beyond boundaries and discover the world’s hidden treasures!
                 </p>
               </div>
               <div

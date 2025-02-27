@@ -13,8 +13,18 @@ const chooseData = [
   },
   {
     id: 2,
-    icon: 'fa-regular fa-house-heart',
+    icon: 'fa-regular fa-badge-check',
     title: 'Get instant tour bookings',
+  },
+  {
+    id: 3,
+    icon: 'fa-regular fa-badge-check',
+    title: 'Unmatched Local Expertise',
+  },
+  {
+    id: 4,
+    icon: 'fa-regular fa-badge-check',
+    title: 'End-to-End Excellence',
   },
 ];
 
@@ -36,11 +46,10 @@ const ChooseOne = () => {
             <div className="it-chooseus-title-box">
               <span className="it-section-subtitle">why Choose us</span>
               <h3 className="it-section-title mb-30">
-                Why you should choose our company
+                Why you should choose us
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                tempor incididunt ut labore et dolore magna aliqua.
+              Beyond ordinary travel, we craft experiences that become cherished memories. With personalized attention and seamless planning, we transform your travel dreams into reality.
               </p>
             </div>
             <div className="it-chooseus-service mb-40">

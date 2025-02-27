@@ -334,8 +334,8 @@
 
 .it-hero-3 {
   &-space {
-    padding-top: 105px;
-    padding-bottom: 65px;
+    padding-top: 65px;
+    padding-bottom: 50px;
   }
   &-thumb-pl {
     transform: translateX(100px);
@@ -347,7 +347,7 @@
     }
   }
   & .it-slider-title {
-    font-size: 80px;
+    font-size: 60px;
     @media #{$xs} {
       font-size: 35px;
     }

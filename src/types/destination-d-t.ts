@@ -4,7 +4,7 @@ export interface IDestinationDT {
   id: number;
   image: StaticImageData;
   title: string;
-  tourCount: number;
+  tourCount: any;
   departuresCount?: number;
   detailsImg: StaticImageData;
 }

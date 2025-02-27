@@ -71,14 +71,12 @@ const AboutOne = () => {
           >
             <div className="it-about-content">
               <div className="it-about-title-box mb-20">
-                <span className="it-section-subtitle">About Company</span>
+                <span className="it-section-subtitle">About us</span>
                 <h3 className="it-section-title mb-20">
-                  Sollicitudin Vestibulum Vulputate Ipsum.
+                  Experience the extraordinary with Skyfall Jewel
                 </h3>
                 <p className="text-black">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                  minim veniam, quis nostrud exercitation ullamco
+                Founded in 2020 as Skyfall Holidays, we've evolved into Skyfall Jewel Tours & Travels to better reflect our expanded services and commitment to creating gem-like experiences that shine in your memory forever. As part of the respected Skyfall parent company, we combine years of expertise with innovative approaches to travel and events.
                 </p>
               </div>
               <div className="it-about-service-item mb-40 d-flex align-items-center">

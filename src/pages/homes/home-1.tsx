@@ -12,6 +12,7 @@ import BlogOne from '@/components/blog/blog-one';
 import FooterOne from '@/layouts/footers/footer-one';
 import ShopOne from '@/components/shop/shop-one';
 import HeaderOne from '@/layouts/headers/header-one';
+import HeroBannerFive from '@/components/hero-banner/hero-banner-five';
 
 const HomeMain = () => {
   return (
@@ -19,7 +20,7 @@ const HomeMain = () => {
       <HeaderOne hasTopBar />
 
       <main>
-        <HeroBannerOne />
+        <HeroBannerFive />
 
         <DestinationOne />
 
@@ -29,17 +30,17 @@ const HomeMain = () => {
 
         <VideoOne />
 
-        <FunFactOne />
+        {/* <FunFactOne /> */}
 
         <ChooseOne />
 
-        <OfferOne />
+        {/* <OfferOne /> */}
 
         <TestimonialOne />
 
-        <ShopOne />
+        {/* <ShopOne /> */}
 
-        <BlogOne />
+        {/* <BlogOne /> */}
       </main>
 
       <FooterOne />

@@ -63,10 +63,10 @@ const VideoOne = ({ btnClass }: IProps) => {
       </div>
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-xl-6 col-lg-9">
+          <div className="col-xl-7 col-lg-9">
             <div className="it-video-content z-index">
               <h3 className="it-section-title text-white mb-30">
-                Ready to get started your travel camping us
+                Discover Your Next Favorite Getaway With Skyfall Jewel
               </h3>
               <div className="it-video-button">
                 <Link
@@ -78,7 +78,7 @@ const VideoOne = ({ btnClass }: IProps) => {
               </div>
             </div>
           </div>
-          <div className="col-xl-6 col-lg-3">
+          <div className="col-xl-5 col-lg-3">
             <div className="it-video-icon z-index justify-content-start justify-content-md-end align-items-center">
               <Link href="#" className="popup-video" onClick={handleLinkClick}>
                 <i className="fa-solid fa-play"></i>

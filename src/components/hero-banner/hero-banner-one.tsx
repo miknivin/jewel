@@ -9,20 +9,20 @@ const heroData = [
   {
     id: 1,
     bg: '/assets/img/home-1/slider/slider-1-1.jpg',
-    subtitle: 'Memories For Life',
-    title: `Let's Explore the world`,
+    subtitle: 'Create Lifetime Memories',
+    title: `Explore Beyond Boundaries with Skyfall Jewel`,
   },
   {
     id: 2,
     bg: '/assets/img/home-1/slider/slider-1-2.jpg',
-    subtitle: 'Memories For Life',
-    title: `Let's Explore the world`,
+    subtitle: 'Create Lifetime Memories',
+    title: `Explore Beyond Boundaries with Skyfall Jewel`,
   },
   {
     id: 3,
     bg: '/assets/img/home-1/slider/slider-1-3.jpg',
-    subtitle: 'Memories For Life',
-    title: `Let's Explore the world`,
+    subtitle: 'Create Lifetime Memories',
+    title: `Explore Beyond Boundaries with Skyfall Jewel`,
   },
 ];
 
@@ -32,8 +32,8 @@ const HeroBannerOne = () => {
     loop: true,
     slidesPerView: 1,
     autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+      // delay: 3000,
+      // disableOnInteraction: false,
     },
     effect: 'fade',
     fadeEffect: {
@@ -56,7 +56,7 @@ const HeroBannerOne = () => {
       <div className="it-slider-wrapper p-relative">
         <div className="swiper-container it-slider-active">
           <Swiper
-            modules={[Autoplay, EffectFade]}
+            modules={[EffectFade]}
             {...sliderOption}
             className="swiper-wrapper"
           >
@@ -84,11 +84,11 @@ const HeroBannerOne = () => {
             ))}
           </Swiper>
         </div>
-        <div className="it-tour-package-main">
+        {/* <div className="it-tour-package-main">
           <div className="container">
             <SearchTourForm />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
