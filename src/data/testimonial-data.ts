@@ -165,26 +165,27 @@ export const testimonialDataFour: ITestimonialDT[] = [
 export const testimonialDataFive: ITestimonialDT[] = [
   {
     id: 1,
-    description: `Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia`,
-    author: 'Terry Florence',
-    designation: 'Ceo of (Ordaint it)',
+    description: `Our family trip to Kerala was flawlessly organised by Skyfall Jewel. The combination of houseboat stay in Alleppey and mountain retreat in Wayanad gave us the perfect balance of relaxation and adventure. What impressed us most was how they handled our last-minute request to include a birthday celebration for our daughter—the surprise cake and local cultural performance they arranged made her day unforgettable!`,
+    author: 'The Patels',
+    designation: 'Ahmedabad',
     avatar: avatar9,
   },
   {
     id: 2,
-    description: `Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia`,
-    author: 'Eunice Daniels',
+    description: `Our family trip to Kerala was flawlessly organised by Skyfall Jewel. The combination of houseboat stay in Alleppey and mountain retreat in Wayanad gave us the perfect balance of relaxation and adventure. What impressed us most was how they handled our last-minute request to include a birthday celebration for our daughter—the surprise cake and local cultural performance they arranged made her day unforgettable!`,
+    author: 'Anonymous', // Add this property
     designation: 'Developer',
     avatar: avatar8,
   },
   {
     id: 3,
-    description: `Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia`,
+    description: `Our family trip to Kerala was flawlessly organised by Skyfall Jewel. The combination of houseboat stay in Alleppey and mountain retreat in Wayanad gave us the perfect balance of relaxation and adventure. What impressed us most was how they handled our last-minute request to include a birthday celebration for our daughter—the surprise cake and local cultural performance they arranged made her day unforgettable!`,
     author: 'Brian Lara',
-    designation: 'Marketting Officer',
+    designation: 'Marketing Officer', // Fix spelling from "Marketting" to "Marketing"
     avatar: avatar7,
   },
 ];
+
 
 export const testimonialDataSix: ITestimonialDT[] = [
   {

@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { SwiperOptions } from 'swiper/types';
 import { Autoplay, Navigation } from 'swiper/modules';
-import { tourPackagesDataThree } from '@/data/tour-packages-data';
+import { tourPackagesDataOne, tourPackagesDataThree } from '@/data/tour-packages-data';
 import TourItemFour from './tour-item/tour-item-four';
 import { LoveShape } from '../svg';
 
@@ -49,7 +49,7 @@ const TourFive = () => {
               <div className="it-featured-title-box z-index mb-60">
                 <span className="it-section-subtitle">Featured Tours</span>
                 <h3 className="it-section-title">
-                  Amazing tour Places around the world
+                Exceptional tours across the world
                 </h3>
               </div>
             </div>
@@ -74,7 +74,7 @@ const TourFive = () => {
                   {...sliderOption}
                   className="swiper-wrapper"
                 >
-                  {tourPackagesDataThree
+                  {tourPackagesDataOne
                     .map((tour) => (
                       <SwiperSlide key={tour.id} className="swiper-slide">
                         <TourItemFour tour={tour} />

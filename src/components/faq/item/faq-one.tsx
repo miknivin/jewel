@@ -41,7 +41,7 @@ const FaqOne = ({ faqs, preExpand }: FaqItemProps) => {
           <AccordionItemPanel>
             <div className="accordion-body d-flex align-items-center">
               <p className="mb-0">{faq.description}</p>
-              <Image src={faq.image} alt="Faq Image" />
+              {/* <Image src={faq.image} alt="Faq Image" /> */}
             </div>
           </AccordionItemPanel>
         </AccordionItem>

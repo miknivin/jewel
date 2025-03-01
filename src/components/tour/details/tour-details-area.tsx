@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 import TourDetailsFaq from '@/components/tour/details/tour-details-faq';
 import TourDetailsReview from './tour-details-review';
@@ -51,8 +52,8 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
             <h3 className="it-section-title mb-40">{tour.title}</h3>
             <div className="it-discover-cat-wrap mb-35">
               <div className="row align-items-center">
-                <div className="col-xl-6">
-                  <div className="it-discover-cat-wrap d-flex align-items-center">
+                <div className="col-xl-8">
+                  <div className="it-discover-cat-wrap d-flex align-items-start">
                     <div className="it-discover-cat-item d-flex">
                       <div className="it-discover-cat-icon">
                         <span>
@@ -65,6 +66,8 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
                           <span>
                             ${Math.round(updatePrice(tour)).toFixed(2)}
                           </span>
+                          <br />
+                          <small>per person</small>
                         </p>
                       </div>
                     </div>
@@ -90,13 +93,13 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
                       <div className="it-discover-cat-text">
                         <p>
                           Tour Type <br />
-                          <span>Adventure</span>
+                          <span>{tour.tourType}</span>
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-xl-6">
+                <div className="col-xl-4">
                   <div className="it-discover-cat-social">
                     <ul>
                       <li>
@@ -109,12 +112,12 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
                           <i className="fa-solid fa-star"></i> Reviews
                         </a>
                       </li>
-                      <li>
+                      {/* <li>
                         <a href="#">
                           <i className="fa-sharp fa-solid fa-heart"></i>{' '}
                           WISHLIST
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -147,86 +150,29 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-6 col-md-6">
-                  <div className="it-discover-content mb-30">
-                    <h3 className="it-discover-sm-title">Advance Facilities</h3>
-                    <p className="mb-25">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua At volutpat diam ut venenatis tellus in metus. Sem
-                      et tortor consequat id porta
-                    </p>
-                  </div>
-                  <div className="it-discover-content">
-                    <h3 className="it-discover-sm-title">Challenge</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua At volutpat diam ut venenatis tellus in metus. Sem
-                      et tortor consequat id porta
-                    </p>
-                  </div>
+                  {tour.advanceContent?.map((content, key) => (
+                    <div key={key} className="it-discover-content mb-30">
+                      <h3 className="it-discover-sm-title">{content.title}</h3>
+                      <p className="mb-25">{content.description}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
             <h3 className="it-discover-title mb-25">Tour Amenities</h3>
             <div className="it-discover-tour-box mb-30">
               <ul>
-                <li>
+                {tour?.amenities?.map((amenity, index)=>(
+                  <li key={index}>
                   <a href="#">
                     <span>
-                      <StarSvgTwo />
+                      <amenity.icon />
                     </span>
-                    4.9 Accommodation
+                    {amenity.title}
                   </a>
                 </li>
-                <li>
-                  <a href="#">
-                    <span>
-                      <AirplaneSvg />
-                    </span>
-                    4.9 Airport
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>
-                      <WiFiSvg />
-                    </span>
-                    wi-fi
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>
-                      <FoodContainerSvg />
-                    </span>
-                    4.9 Dinner & Snacks.
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>
-                      <SettingsSvg />
-                    </span>
-                    Additional Services
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>
-                      <SecurityShieldSvg />
-                    </span>
-                    Insurance
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span>
-                      <CarSvg />
-                    </span>
-                    Transport
-                  </a>
-                </li>
+                ))}
+                
               </ul>
             </div>
             <h3 className="it-discover-title mb-25">Included/Exclude</h3>
@@ -235,43 +181,24 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
                 <div className="col-xl-7">
                   <div className="it-discover-included-content mb-40">
                     <ul>
-                      <li>
-                        <i className="fa-solid fa-check"></i>
-                        Pick and Drop Services
-                      </li>
-                      <li>
-                        <i className="fa-solid fa-check"></i>1 Meal Per Day
-                      </li>
-                      <li>
-                        <i className="fa-solid fa-check"></i>
-                        Cruise Dinner & Music Event
-                      </li>
-                      <li>
-                        <i className="fa-solid fa-check"></i>
-                        Visit 7 Best Places in the City With Group
-                      </li>
+                    {tour.included?.map((item, index) => (
+                        <li key={index}>
+                          <i className="fa-solid fa-check"></i> {item}
+                        </li>
+                      ))}
+
                     </ul>
                   </div>
                 </div>
                 <div className="col-xl-5">
                   <div className="it-discover-included-content mb-40">
                     <ul>
-                      <li className="it-discover-exclude">
-                        <i className="fa-regular fa-x"></i>
-                        Additional Services
-                      </li>
-                      <li className="it-discover-exclude">
-                        <i className="fa-regular fa-x"></i>
-                        Insurance
-                      </li>
-                      <li className="it-discover-exclude">
-                        <i className="fa-regular fa-x"></i>
-                        Food & Drinks
-                      </li>
-                      <li className="it-discover-exclude">
-                        <i className="fa-regular fa-x"></i>
-                        Tickets
-                      </li>
+                    {tour.excluded?.map((item, index) => (
+                        <li className="it-discover-exclude" key={index}>
+                          <i className="fa-solid fa-x"></i> {item}
+                        </li>
+                      ))}
+                     
                     </ul>
                   </div>
                 </div>
@@ -279,15 +206,16 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
             </div>
             <h3 className="it-discover-title mb-25">Tour Plans</h3>
             <div className="it-discover-acordian mb-30">
-              <TourDetailsFaq />
+              {tour.tourPlans&&<TourDetailsFaq faqData={tour.tourPlans} />}
+              
             </div>
             <h3 className="it-discover-title mb-35">Review Scores</h3>
-            <div className="it-discover-review-area mb-30">
+            {/* <div className="it-discover-review-area mb-30">
               <TourDetailsReview
                 rating={tour.rating}
                 progresses={tour.progresses}
               />
-            </div>
+            </div> */}
             <h3 className="it-discover-title mb-35">Location</h3>
             <div className="it-discover-maps mb-35">
               <iframe
@@ -299,7 +227,7 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
               ></iframe>
             </div>
             <ReviewBox />
-            <h3 className="it-discover-title mb-25">Related Tours</h3>
+            {/* <h3 className="it-discover-title mb-25">Related Tours</h3>
             <div className="it-featured-4 pb-120">
               <div className="row">
                 {tourPackagesDataThree
@@ -310,7 +238,7 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
                   ))
                   .slice(12, 14)}
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="col-xl-4 col-lg-4">
             <DetailsSidebar tour={tour} />

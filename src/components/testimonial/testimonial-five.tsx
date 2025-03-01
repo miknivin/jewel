@@ -53,20 +53,19 @@ const TestimonialFive = () => {
           <div className="col-xl-5 col-lg-5 col-md-5">
             <div className="it-testi-inner-title-box">
               <h3 className="it-section-title text-white">
-                What our Customers are{' '}
-                <span className="it-breack-text">saying us?</span>
+              What do our explorers{' '}
+                <span className="it-breack-text">say about us?</span>
               </h3>
               <p className="text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.
+              Our explorers are more than happy to shed a good word regarding us, even without asking. That’s the power of giving them the best travel experiences of their lives. 
               </p>
             </div>
             <div className="it-testi-inner-text mb-20 d-flex">
               <div className="it-testi-count-item mr-40">
                 <h3 className="it-testi-count-number">
-                  <Counter start={0} end={25} duration={3} counterSubText="+" />
+                  <Counter start={0} end={100} duration={3} counterSubText="+" />
                 </h3>{' '}
-                <p>Happy People</p>
+                <p>Happy Explorers</p>
               </div>
               <div className="it-testi-count-item">
                 <h3 className="it-testi-count-number">
@@ -77,7 +76,7 @@ const TestimonialFive = () => {
                     counterSubText="+"
                   />
                 </h3>
-                <p>Overall Rating</p>
+                <p>Overall Ratings</p>
               </div>
             </div>
             <div className="it-testi-inner-button">

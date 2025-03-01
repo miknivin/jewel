@@ -61,9 +61,7 @@ const FooterOne = ({
                 </div>
                 <div className="it-footer-content">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    doeiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                  Creating unforgettable journeys through stunning destinations since 2020. Your next adventure awaits.
                   </p>
                   <div className="it-footer-social">
                     <a href="#">

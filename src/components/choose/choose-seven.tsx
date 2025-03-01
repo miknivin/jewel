@@ -65,12 +65,11 @@ const ChooseSeven = () => {
               <div className="it-chooseus-title-box mb-30">
                 <span className="it-section-subtitle">What we do</span>
                 <h3 className="it-section-title mb-20">
-                  We Arrange the Best Tour <br />
-                  Ever Possible.
+                Creating Journeys Beyond  <br />
+                The Ordinary Path
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                We specialise in personalised travel experiences, luxury and budget accommodations, transportation solutions, and memorable event management across India and international destinations.
                 </p>
               </div>
               <div className="row">

@@ -41,11 +41,10 @@ const VideoTwo = () => {
           <div className="col-xl-6 col-lg-7">
             <div className="it-video-content z-index">
               <h3 className="it-section-title text-white mb-10">
-                Ready to travel with real adventure and enjoy natural
+                Discover your dream journey with us today
               </h3>
               <p className="text-white mb-20">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.
+              Let our travel experts craft your perfect getaway. From romantic escapes to family adventures, your unforgettable experience begins with a simple conversation.
               </p>
               <div className="it-video-button">
                 <Link href="/contact" className="it-btn-secondary">

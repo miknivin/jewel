@@ -288,7 +288,7 @@ const DetailsSidebar = ({ tour }: IProps) => {
         </div>
       </div>
 
-      <div className="it-discover-deals">
+      {/* <div className="it-discover-deals">
         <h3 className="it-discover-package-title">Last Minute Deals</h3>
         <div className="it-discover-deals-box">
           {tourPackagesDataThree
@@ -338,7 +338,7 @@ const DetailsSidebar = ({ tour }: IProps) => {
             ))
             .slice(2, 5)}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

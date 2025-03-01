@@ -71,7 +71,10 @@ const AboutOne = () => {
           >
             <div className="it-about-content">
               <div className="it-about-title-box mb-20">
-                <span className="it-section-subtitle">About us</span>
+                <span className="it-section-subtitle">
+                  Adventure Awaits, 
+                  Experience Calls
+                </span>
                 <h3 className="it-section-title mb-20">
                   Experience the extraordinary with Skyfall Jewel
                 </h3>

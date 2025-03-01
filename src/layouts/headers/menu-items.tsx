@@ -62,7 +62,7 @@ const MenuItems = ({ isMobileMenu }: IProps) => {
       <Link href="/">Home</Link>
     </li>
     <li>
-      <Link href="/abour">About</Link>
+      <Link href="/about">About</Link>
     </li>
     <li className="has-dropdown">
       <Link href="/tour" onClick={handleClick}>

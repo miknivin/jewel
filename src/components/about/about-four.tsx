@@ -9,19 +9,19 @@ import aboutImg3 from '@/assets/img/inner-page/about/inner-ab-1-3.jpg';
 const counterData = [
   {
     id: 1,
-    countNum: 25,
+    countNum: 100,
     countSubtext: '+',
     countTitle: 'Our Explorers',
   },
   {
     id: 2,
-    countNum: 300,
+    countNum: 25,
     countSubtext: '+',
     countTitle: 'Destinations',
   },
   {
     id: 3,
-    countNum: 25,
+    countNum: 5,
     countSubtext: '+',
     countTitle: 'Years experience',
   },
@@ -89,12 +89,11 @@ const AboutFour = () => {
             <div className="it-about-title-box mb-30">
               <span className="it-section-subtitle">about us</span>
               <h2 className="it-section-title mb-20">
-                Sollicitudin Vestibulum Vulputate Ipsum.
+              Adventure Awaits, 
+              Experience Calls
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud.
+              Since 2020, Skyfall Jewel Tours & Travels has transformed ordinary journeys into extraordinary memories through personalized itineraries, seamless logistics, and authentic experiences across India and beyond.
               </p>
             </div>
             <div className="it-about-counter-box mb-20">
