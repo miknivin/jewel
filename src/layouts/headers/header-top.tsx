@@ -59,14 +59,14 @@ const HeaderTop = () => {
                     <span>
                       <PhoneSvg />
                     </span>
-                    <a href="tel:000967-237-96">(000) 967-237-96</a>
+                    <a href="tel:000967-237-96">+918075787424</a>
                   </li>
                   <li>
                     <span>
                       <MailSvg />
                     </span>
-                    <a href="mailto:touresinfo@gmail.com">
-                      touresinfo@gmail.com
+                    <a href="mailto:skyfalljewel@gmail.com">
+                    skyfalljewel@gmail.com
                     </a>
                   </li>
                   <li className="d-none d-xl-inline-block">

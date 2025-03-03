@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ITourDT } from '@/types/tour-packages-d-t';
-import { updatePrice } from '@/utils/helper';
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ITourDT } from "@/types/tour-packages-d-t";
+import { updatePrice } from "@/utils/helper";
 
 interface TourItemProps {
   tour: ITourDT;
@@ -20,7 +20,7 @@ const TourItemOne = ({ tour }: TourItemProps) => {
           alt={tour.title}
           width={370}
           height={250}
-          style={{ height: 'auto' }}
+          style={{ height: "auto" }}
         />
       </div>
       <div className="it-featured-top d-flex align-items-center">
@@ -36,13 +36,13 @@ const TourItemOne = ({ tour }: TourItemProps) => {
         )}
       </div>
       <div className="it-featured-content">
-        <div className="it-featured-react-box d-flex align-items-center">
+        {/* <div className="it-featured-react-box d-flex align-items-center">
           <div className="it-featured-react">
             <button onClick={() => setIsInLove(!isInLove)}>
               <span>
                 <i
                   className={
-                    isInLove ? 'fa-solid fa-heart' : 'fa-light fa-heart'
+                    isInLove ? "fa-solid fa-heart" : "fa-light fa-heart"
                   }
                 ></i>
               </span>
@@ -55,21 +55,22 @@ const TourItemOne = ({ tour }: TourItemProps) => {
               </span>
             </button>
           </div>
-        </div>
-        <div className="it-featured-meta mb-5">
+        </div> */}
+        {/* <div className="it-featured-meta mb-5">
           <a href="https://www.google.com/maps">
             <i className="fa-solid fa-location-dot"></i> {tour.address}
           </a>
-        </div>
+        </div> */}
         <h3 className="it-featured-title">
           <Link href={`/tour-details/${tour.id}`}>{tour.title}</Link>
         </h3>
         <div className="it-featured-review-box pb-25 mb-25 d-flex align-items-center justify-content-between">
           <div className="it-featured-price d-flex align-items-center">
-            <i className="fa-regular fa-circle-dollar"></i>
+            <i className="fa-solid fa-indian-rupee-sign"></i>
             <p>
-              From <span>${Math.round(updatePrice(tour)).toFixed(2)}</span>{' '}
-              {tour.badgeTitle && <del>${tour.price.toFixed(2)}</del>}
+              From <span>₹{Math.round(updatePrice(tour)).toFixed(2)}</span>{" "}
+              <br />
+              {tour.badgeTitle && <del>₹{tour.price.toFixed(2)}</del>}
             </p>
           </div>
           <div className="it-featured-review d-flex align-items-center">
@@ -86,11 +87,11 @@ const TourItemOne = ({ tour }: TourItemProps) => {
                 <i className="fa-regular fa-clock"></i> {tour.duration} days
               </span>
             </div>
-            <div className="it-featured-user">
+            {/* <div className="it-featured-user">
               <span>
                 <i className="fa-regular fa-user"></i> {tour.travelerCount}
               </span>
-            </div>
+            </div> */}
           </div>
           <div className="it-featured-action">
             <Link

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import AboutMain from '@/pages/about/about';
 
 export const metadata: Metadata = {
-  title: 'Travello - About Page',
+  title: 'Jewels - About Page',
 };
 
 const AboutPage = () => {

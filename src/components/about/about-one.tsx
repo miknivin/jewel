@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import shapeImg1 from '@/assets/img/home-1/about/shape/cloud.png';
-import shapeImg2 from '@/assets/img/home-1/about/shape/rocket.png';
-import aboutImg1 from '@/assets/img/home-1/about/img/img-1.jpg';
-import aboutImg2 from '@/assets/img/home-1/about/img/img-2.jpg';
-import aboutImg3 from '@/assets/img/home-1/about/img/img-3.jpg';
+import shapeImg1 from "@/assets/img/home-1/about/shape/cloud.png";
+import shapeImg2 from "@/assets/img/home-1/about/shape/rocket.png";
+import aboutImg1 from "@/assets/img/home-1/about/img/img-1.jpg";
+import aboutImg2 from "@/assets/img/home-1/about/img/img-2.jpg";
+import aboutImg3 from "@/assets/img/home-1/about/img/img-3.jpg";
 
 const AboutOne = () => {
   return (
@@ -20,7 +20,7 @@ const AboutOne = () => {
             alt="Shape Img"
             width={169}
             height={79}
-            style={{ height: 'auto' }}
+            style={{ height: "auto" }}
           />
         </div>
         <div className="it-about-shape-2 d-none d-xxl-block">
@@ -41,7 +41,7 @@ const AboutOne = () => {
                   alt="About Img"
                   width={419}
                   height={350}
-                  style={{ height: 'auto' }}
+                  style={{ height: "auto" }}
                 />
                 <div className="it-about-sub-thumb-1 d-none d-lg-block">
                   <Image
@@ -49,7 +49,7 @@ const AboutOne = () => {
                     alt="About Img"
                     width={264}
                     height={265}
-                    style={{ height: 'auto' }}
+                    style={{ height: "auto" }}
                   />
                 </div>
                 <div className="it-about-sub-thumb-2 d-none d-lg-block">
@@ -58,7 +58,7 @@ const AboutOne = () => {
                     alt="About Img"
                     width={244}
                     height={244}
-                    style={{ height: 'auto' }}
+                    style={{ height: "auto" }}
                   />
                 </div>
               </div>
@@ -72,17 +72,21 @@ const AboutOne = () => {
             <div className="it-about-content">
               <div className="it-about-title-box mb-20">
                 <span className="it-section-subtitle">
-                  Adventure Awaits, 
-                  Experience Calls
+                  Adventure Awaits, Experience Calls
                 </span>
                 <h3 className="it-section-title mb-20">
                   Experience the extraordinary with Skyfall Jewel
                 </h3>
                 <p className="text-black">
-                Founded in 2020 as Skyfall Holidays, we've evolved into Skyfall Jewel Tours & Travels to better reflect our expanded services and commitment to creating gem-like experiences that shine in your memory forever. As part of the respected Skyfall parent company, we combine years of expertise with innovative approaches to travel and events.
+                  Founded in 2020 as Skyfall Holidays, we've evolved into
+                  Skyfall Jewel Tours & Travels to better reflect our expanded
+                  services and commitment to creating gem-like experiences that
+                  shine in your memory forever. As part of the respected Skyfall
+                  parent company, we combine years of expertise with innovative
+                  approaches to travel and events.
                 </p>
               </div>
-              <div className="it-about-service-item mb-40 d-flex align-items-center">
+              {/* <div className="it-about-service-item mb-40 d-flex align-items-center">
                 <div className="it-about-service-icon mr-20">
                   <span>
                     <i className="flaticon-worker"></i>
@@ -113,7 +117,7 @@ const AboutOne = () => {
                     velit esse cillum dolore
                   </p>
                 </div>
-              </div>
+              </div> */}
               <Link href="/about" className="it-btn-primary">
                 Discover More
               </Link>

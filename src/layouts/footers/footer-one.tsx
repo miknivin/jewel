@@ -91,14 +91,9 @@ const FooterOne = ({
                       <a href="#">Home</a>
                     </li>
                     <li>
-                      <a href="#">About us</a>
+                      <Link href="/about">About us</Link>
                     </li>
-                    <li>
-                      <a href="#">Blog update</a>
-                    </li>
-                    <li>
-                      <a href="#">Our services</a>
-                    </li>
+
                     <li>
                       <a href="#">Testimonial</a>
                     </li>
@@ -117,12 +112,12 @@ const FooterOne = ({
                     <li>
                       <a href="#">Terms & conditions</a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a href="#">FAQ</a>
                     </li>
                     <li>
                       <a href="#">Hydropower Plants</a>
-                    </li>
+                    </li> */}
                     <li>
                       <a href="#">Customer support</a>
                     </li>
@@ -167,7 +162,7 @@ const FooterOne = ({
                   <p>
                     Copyright © 2024{" "}
                     <span>
-                      <a href="#">Travello</a>
+                      <a href="#">Skyfall</a>
                     </span>{" "}
                     All Right Reserved
                   </p>

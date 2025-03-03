@@ -1,5 +1,5 @@
-import ContactForm from '../form/contact-form';
-import { ClockSvgTwo, LocationSvgThree, PhoneSvgTwo } from '../svg';
+import ContactForm from "../form/contact-form";
+import { ClockSvgTwo, LocationSvgThree, PhoneSvgTwo } from "../svg";
 
 const ContactArea = () => {
   return (
@@ -39,8 +39,8 @@ const ContactArea = () => {
                     </div>
                     <div className="it-contact-text">
                       <span>Call Us:</span>
-                      <a href="tel:+0009873267">(+000) 987-3267</a>
-                      <a href="tel:+88568956238">+88 568 956 238</a>
+                      <a href="tel:+918075787424">+918075787424</a>
+                      {/* <a href="tel:+88568956238">+88 568 956 238</a> */}
                     </div>
                   </div>
                 </li>

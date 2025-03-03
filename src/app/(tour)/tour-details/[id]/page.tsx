@@ -3,7 +3,7 @@ import { tourPackagesData } from '@/data/tour-packages-data';
 import TourDetailsMain from '@/pages/tour-details/tour-details';
 
 export const metadata: Metadata = {
-  title: 'Travello - Tour Details Page',
+  title: 'Jewels - Tour Details Page',
 };
 
 export default function TourDetailsPage({
