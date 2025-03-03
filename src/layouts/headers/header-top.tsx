@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useCallback, useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
-import { LocationSvg, MailSvg, PhoneSvg } from '@/components/svg';
+import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { LocationSvg, MailSvg, PhoneSvg } from "@/components/svg";
 
-import languageLogo from '@/assets/img/logo/logo-lang.png';
+import languageLogo from "@/assets/img/logo/logo-lang.png";
 
 const HeaderTop = () => {
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] =
@@ -40,10 +40,10 @@ const HeaderTop = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [languageRef, currencyRef]);
 
@@ -82,7 +82,7 @@ const HeaderTop = () => {
             </div>
             <div className="col-xl-4 col-lg-6 col-md-6 col-sm-6">
               <div className="it-header-top-right d-flex align-items-center justify-content-end">
-                <div className="it-header-top-lang-wrapper d-flex align-items-center">
+                {/* <div className="it-header-top-lang-wrapper d-flex align-items-center">
                   <div className="it-header-currency d-none d-xl-block">
                     <span
                       ref={currencyRef}
@@ -129,7 +129,7 @@ const HeaderTop = () => {
                       <li>Canada</li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
                 <div className="it-header-top-right-social p-relative text-end">
                   <a href="">
                     <i className="fa-brands fa-facebook-f"></i>

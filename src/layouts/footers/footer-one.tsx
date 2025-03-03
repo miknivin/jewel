@@ -1,9 +1,9 @@
-import Image, { StaticImageData } from 'next/image';
-import Link from 'next/link';
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
-import Logo from '@/assets/img/logo/logo.png';
-import shapeImg1 from '@/assets/img/home-1/footer/left-tree.png';
-import shapeImg2 from '@/assets/img/home-1/footer/right-tree.png';
+import Logo from "@/assets/img/logo/logo.png";
+import shapeImg1 from "@/assets/img/home-1/footer/left-tree.png";
+import shapeImg2 from "@/assets/img/home-1/footer/right-tree.png";
 
 interface FooterProps {
   footerClass?: string;
@@ -24,7 +24,7 @@ const FooterOne = ({
         className={
           footerClass
             ? footerClass
-            : 'it-footer-area p-relative pt-120 pb-135 black-bg fix'
+            : "it-footer-area p-relative pt-120 pb-135 black-bg fix"
         }
       >
         <div className="it-footer-shape-1">
@@ -33,7 +33,7 @@ const FooterOne = ({
             alt="Shape Img"
             width={306}
             height={323}
-            style={{ height: 'auto' }}
+            style={{ height: "auto" }}
           />
         </div>
         <div className="it-footer-shape-2">
@@ -42,7 +42,7 @@ const FooterOne = ({
             alt="Shape Img"
             width={452}
             height={497}
-            style={{ height: 'auto' }}
+            style={{ height: "auto" }}
           />
         </div>
         <div className="container">
@@ -52,6 +52,7 @@ const FooterOne = ({
                 <div className="it-footer-logo mb-35">
                   <Link href="/">
                     <Image
+                      style={{ objectFit: "cover" }}
                       src={footerLogo ? footerLogo : Logo}
                       alt="Travello"
                       width={129}
@@ -61,7 +62,8 @@ const FooterOne = ({
                 </div>
                 <div className="it-footer-content">
                   <p>
-                  Creating unforgettable journeys through stunning destinations since 2020. Your next adventure awaits.
+                    Creating unforgettable journeys through stunning
+                    destinations since 2020. Your next adventure awaits.
                   </p>
                   <div className="it-footer-social">
                     <a href="#">
@@ -140,7 +142,7 @@ const FooterOne = ({
                     </div>
                     <button
                       type="submit"
-                      className={btnClass ? btnClass : 'it-btn-primary'}
+                      className={btnClass ? btnClass : "it-btn-primary"}
                     >
                       Subscribe now
                     </button>
@@ -154,7 +156,7 @@ const FooterOne = ({
 
       <div
         className={
-          copyRightClass ? copyRightClass : 'it-copyright-area z-index'
+          copyRightClass ? copyRightClass : "it-copyright-area z-index"
         }
       >
         <div className="container">
@@ -163,10 +165,10 @@ const FooterOne = ({
               <div className="col-xl-6 col-lg-6">
                 <div className="it-copyright-text text-center text-lg-start">
                   <p>
-                    Copyright © 2024{' '}
+                    Copyright © 2024{" "}
                     <span>
                       <a href="#">Travello</a>
-                    </span>{' '}
+                    </span>{" "}
                     All Right Reserved
                   </p>
                 </div>

@@ -1,20 +1,21 @@
-import AboutFour from '@/components/about/about-four';
-import Breadcrumb from '@/components/breadcrumb/breadcrumb';
-import ChooseSeven from '@/components/choose/choose-seven';
-import Newsletter from '@/components/newsletter/newsletter';
-import TestimonialFive from '@/components/testimonial/testimonial-five';
-import TourFive from '@/components/tour/tour-five';
-import VideoTwo from '@/components/video/video-two';
-import FooterOne from '@/layouts/footers/footer-one';
-import HeaderTwo from '@/layouts/headers/header-two';
-import Wrapper from '@/layouts/wrapper';
+import AboutFour from "@/components/about/about-four";
+import Breadcrumb from "@/components/breadcrumb/breadcrumb";
+import ChooseSeven from "@/components/choose/choose-seven";
+import Newsletter from "@/components/newsletter/newsletter";
+import TestimonialFive from "@/components/testimonial/testimonial-five";
+import TourFive from "@/components/tour/tour-five";
+import VideoTwo from "@/components/video/video-two";
+import FooterOne from "@/layouts/footers/footer-one";
+import HeaderOne from "@/layouts/headers/header-one";
+import HeaderTwo from "@/layouts/headers/header-two";
+import Wrapper from "@/layouts/wrapper";
 
 const AboutMain = () => {
   return (
     <Wrapper>
-      <HeaderTwo />
+      <HeaderOne hasTopBar />
       <main>
-        <Breadcrumb title="ABout us" subtitle="About" />
+        <Breadcrumb title="About us" subtitle="About" />
 
         <AboutFour />
 

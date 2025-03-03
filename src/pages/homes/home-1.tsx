@@ -1,19 +1,19 @@
-import AboutOne from '@/components/about/about-one';
-import DestinationOne from '@/components/destination/destination-one';
-import TourOne from '@/components/tour/tour-one';
-import HeroBannerOne from '@/components/hero-banner/hero-banner-one';
-import Wrapper from '@/layouts/wrapper';
-import VideoOne from '@/components/video/video-one';
-import FunFactOne from '@/components/funfact/funfact-one';
-import ChooseOne from '@/components/choose/choose-one';
-import OfferOne from '@/components/offer/offer-one';
-import TestimonialOne from '@/components/testimonial/testimonial-one';
-import BlogOne from '@/components/blog/blog-one';
-import FooterOne from '@/layouts/footers/footer-one';
-import ShopOne from '@/components/shop/shop-one';
-import HeaderOne from '@/layouts/headers/header-one';
-import HeroBannerFive from '@/components/hero-banner/hero-banner-five';
-
+import AboutOne from "@/components/about/about-one";
+import DestinationOne from "@/components/destination/destination-one";
+import TourOne from "@/components/tour/tour-one";
+import HeroBannerOne from "@/components/hero-banner/hero-banner-one";
+import Wrapper from "@/layouts/wrapper";
+import VideoOne from "@/components/video/video-one";
+import FunFactOne from "@/components/funfact/funfact-one";
+import ChooseOne from "@/components/choose/choose-one";
+import OfferOne from "@/components/offer/offer-one";
+import TestimonialOne from "@/components/testimonial/testimonial-one";
+import BlogOne from "@/components/blog/blog-one";
+import FooterOne from "@/layouts/footers/footer-one";
+import ShopOne from "@/components/shop/shop-one";
+import HeaderOne from "@/layouts/headers/header-one";
+import HeroBannerFive from "@/components/hero-banner/hero-banner-five";
+import footerLogo from "@/assets/img/logo/light-logo.png";
 const HomeMain = () => {
   return (
     <Wrapper>
@@ -43,7 +43,7 @@ const HomeMain = () => {
         {/* <BlogOne /> */}
       </main>
 
-      <FooterOne />
+      <FooterOne footerLogo={footerLogo} />
     </Wrapper>
   );
 };

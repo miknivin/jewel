@@ -3,13 +3,13 @@ import ContactArea from '@/components/contact/contact-area';
 import MapArea from '@/components/contact/map-area';
 import Newsletter from '@/components/newsletter/newsletter';
 import FooterOne from '@/layouts/footers/footer-one';
-import HeaderTwo from '@/layouts/headers/header-two';
+import HeaderOne from '@/layouts/headers/header-one';
 import Wrapper from '@/layouts/wrapper';
 
 const ContactMain = () => {
   return (
     <Wrapper>
-      <HeaderTwo />
+      <HeaderOne />
       <main>
         <Breadcrumb title="Contact Us" subtitle="Contact" />
 

@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import MenuItems from './menu-items';
-import OffCanvas from '@/components/offcanvas/offcanvas';
-import HeaderTop from './header-top';
-import HeaderTopTwo from './header-top-two';
-import { CartSvg } from '@/components/svg';
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import MenuItems from "./menu-items";
+import OffCanvas from "@/components/offcanvas/offcanvas";
+import HeaderTop from "./header-top";
+import HeaderTopTwo from "./header-top-two";
+import { CartSvg } from "@/components/svg";
 
-import Logo from '@/assets/img/logo/logo.png';
+import Logo from "@/assets/img/logo/logo.png";
 
 interface HeaderProps {
   hasTopBar?: boolean;
@@ -33,8 +33,8 @@ const HeaderOne = ({ hasTopBar, hasTopBarTwo, headerClass }: HeaderProps) => {
 
     toggleVisibility();
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   return (
@@ -53,9 +53,9 @@ const HeaderOne = ({ hasTopBar, hasTopBarTwo, headerClass }: HeaderProps) => {
           className={
             isVisible
               ? `${
-                  headerClass ? headerClass : 'it-header-bottom-area'
+                  headerClass ? headerClass : "it-header-bottom-area"
                 }  header-sticky`
-              : `${headerClass ? headerClass : 'it-header-bottom-area'}`
+              : `${headerClass ? headerClass : "it-header-bottom-area"}`
           }
         >
           <div className="container">
@@ -68,7 +68,8 @@ const HeaderOne = ({ hasTopBar, hasTopBarTwo, headerClass }: HeaderProps) => {
                         src={Logo}
                         alt="Travello"
                         width={129}
-                        height={40}
+                        height={50}
+                        style={{ objectFit: "cover" }}
                       />
                     </Link>
                   </div>
