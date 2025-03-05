@@ -1,6 +1,6 @@
-import { ITourDT } from '@/types/tour-packages-d-t';
-import { updatePrice } from '@/utils/helper';
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { ITourDT } from "@/types/tour-packages-d-t";
+import { updatePrice } from "@/utils/helper";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface BookingState {
   tour: ITourDT | null;
@@ -19,8 +19,8 @@ const initialState: BookingState = {
   tour: null,
   checkIn: null,
   adultTickets: 1,
-  kidTickets: 1,
-  childTickets: 1,
+  kidTickets: 0,
+  childTickets: 0,
   additionalGuide: false,
   internet: false,
   photography: false,
@@ -29,7 +29,7 @@ const initialState: BookingState = {
 };
 
 const bookingSlice = createSlice({
-  name: 'booking',
+  name: "booking",
   initialState,
   reducers: {
     setTour: (state, action: PayloadAction<ITourDT>) => {

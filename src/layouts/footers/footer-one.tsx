@@ -66,17 +66,11 @@ const FooterOne = ({
                     destinations since 2020. Your next adventure awaits.
                   </p>
                   <div className="it-footer-social">
-                    <a href="#">
-                      <i className="flaticon-facebook-app-symbol"></i>
+                    <a href="https://www.facebook.com/share/15t2C5v9t5/?mibextid=wwXIfr">
+                      <i className="fa-brands fa-facebook-f"></i>
                     </a>
-                    <a href="#">
-                      <i className="flaticon-twitter"></i>
-                    </a>
-                    <a href="#">
-                      <i className="flaticon-skype"></i>
-                    </a>
-                    <a href="#">
-                      <i className="flaticon-linkedin"></i>
+                    <a href="https://www.instagram.com/skyfalljewel?igsh=ZHE3Ymk1dTAzOW1h">
+                      <i className="fa-brands fa-instagram"></i>
                     </a>
                   </div>
                 </div>

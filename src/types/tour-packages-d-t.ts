@@ -5,6 +5,7 @@ export interface ITourDT {
   image: StaticImageData;
   title: string;
   price: number;
+  
   badgeTitle?: string;
   isFeature?: boolean;
   address: string;

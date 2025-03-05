@@ -54,7 +54,7 @@ const ContactArea = () => {
                     <div className="it-contact-text">
                       <span>Location:</span>
                       <a target="_blank" href="#">
-                        242 Carlyle RdZebulon, North <br /> Carolina(NC), 27597
+                        Skyfall Jewel, Vellamkolly, <br /> Chundel, Wayanad
                       </a>
                     </div>
                   </div>

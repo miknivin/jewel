@@ -1,35 +1,31 @@
-import Image from 'next/image';
-import { DislikeSvg, LikeSvg } from '@/components/svg';
-import TourReviewForm from '@/components/form/tour-review-form';
+import Image from "next/image";
+import { DislikeSvg, LikeSvg } from "@/components/svg";
+import TourReviewForm from "@/components/form/tour-review-form";
 
-import avatarImg1 from '@/assets/img/inner-page/discover/client-1-1.jpg';
-import avatarImg2 from '@/assets/img/inner-page/discover/client-1-2.jpg';
-import avatarImg3 from '@/assets/img/inner-page/discover/client-1-3.jpg';
+import avatarImg1 from "@/assets/img/inner-page/discover/client-1-1.jpg";
+import avatarImg2 from "@/assets/img/inner-page/discover/client-1-2.jpg";
+import avatarImg3 from "@/assets/img/inner-page/discover/client-1-3.jpg";
 
 const clientData = [
   {
     id: 1,
     avatar: avatarImg1,
-    author: 'Jenny Wilson',
-    publishedDate: 'March 8, 2020',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. At volutpat diam ut venenatis tellus
-                    in metus. Sem et tortor consequat id porta. Et malesuada fames ac turpis egestas`,
+    author: "Seno T Shaju ",
+    publishedDate: "March 8, 2020",
+    description: `Skyfall Jewel Tours made my Dubai trip an absolute dream! From zooming through the desert on a safari to standing atop the Burj Khalifa, every moment felt special. The team was always available, ensuring a hassle-free and luxurious experience. Can't wait to book my next adventure with them!"*`,
   },
   {
     id: 2,
     avatar: avatarImg2,
-    author: 'Katy Perry',
-    publishedDate: 'January 21, 2022',
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. At volutpat diam ut venenatis tellus
-                    in metus. Sem et tortor consequat id porta. Et malesuada fames ac turpis egestas`,
+    author: "Swathy Krishna",
+    publishedDate: "January 21, 2022",
+    description: `From the moment I landed, everything was taken care of—stunning beach villas, island hopping, and the most beautiful snorkeling spots! Skyfall Jewel Tours made my Maldives trip effortless and unforgettable. I felt so pampered and stress-free. Definitely booking again!"`,
   },
   {
     id: 3,
     avatar: avatarImg3,
-    author: 'Idhika Paul',
-    publishedDate: 'November 25, 2023',
+    author: "Idhika Paul",
+    publishedDate: "November 25, 2023",
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. At volutpat diam ut venenatis tellus
                     in metus. Sem et tortor consequat id porta. Et malesuada fames ac turpis egestas`,
@@ -39,9 +35,9 @@ const clientData = [
 const ReviewBox = () => {
   return (
     <>
-      <h3 className="it-discover-title mb-35">
+      {/* <h3 className="it-discover-title mb-35">
         {clientData.length} thoughts on “Discovery Island Kayak Tour”
-      </h3>
+      </h3> */}
       <div className="it-discover-client-wrap">
         {clientData.map((client) => (
           <div key={client.id} className="it-discover-client-item">
@@ -52,7 +48,7 @@ const ReviewBox = () => {
                   alt={client.author}
                   width={80}
                   height={80}
-                  style={{ height: 'auto' }}
+                  style={{ height: "auto" }}
                 />
               </div>
               <div className="it-discover-client-content">

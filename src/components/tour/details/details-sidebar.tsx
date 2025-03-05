@@ -5,24 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { RootState } from "@/redux/rootReducer";
 import { useRouter } from "next/navigation";
-import {
-  setAdultTickets,
-  setCheckIn,
-  setChildTickets,
-  setIsBookingClicked,
-  setKidTickets,
-  setTour,
-  toggleAdditionalGuide,
-  toggleInternet,
-  togglePhotography,
-} from "@/redux/slices/bookingSlice";
 import { ITourDT } from "@/types/tour-packages-d-t";
-import { tourPackagesDataThree } from "@/data/tour-packages-data";
-import { useAppDispatch, useAppSelector } from "@/hooks/redux-hooks";
-import { updatePrice } from "@/utils/helper";
 import { MinusSvg, PlusSvg } from "@/components/svg";
+import { services } from "./../../../utils/data/services";
+import { updatePrice } from "@/utils/helper";
 
 interface IProps {
   tour: ITourDT;
@@ -30,62 +17,74 @@ interface IProps {
 
 const DetailsSidebar = ({ tour }: IProps) => {
   const [isDatePickerOpen, setIsDatePickerOpen] = useState<boolean>(false);
-  const serviceCost = 120;
-  const dispatch = useAppDispatch();
+  const [checkIn, setCheckIn] = useState<string | null>(null);
+  const [adultTickets, setAdultTickets] = useState<number>(1);
+  const [childTickets, setChildTickets] = useState<number>(0);
+  const [selectedServices, setSelectedServices] = useState<{
+    [key: string]: boolean;
+  }>(
+    services.reduce((acc, service) => ({ ...acc, [service.name]: false }), {})
+  );
+  const [totalCost, setTotalCost] = useState<number>(0);
+
   const router = useRouter();
+  const basePrice = Math.round(updatePrice(tour)) || 0; // Assuming tour has a price property
 
-  // Access state from redux
-  const {
-    checkIn,
-    adultTickets,
-    kidTickets,
-    childTickets,
-    additionalGuide,
-    internet,
-    photography,
-    totalCost,
-  } = useAppSelector((state: RootState) => state.booking);
-
-  // Dispatch the tour object when the component mounts
+  // Calculate total cost
   useEffect(() => {
-    dispatch(setTour(tour));
-  }, [dispatch, tour]);
+    console.log(tour.price, "price");
 
-  // Dispatch the action to Navigate to booking page
+    const adultCost = adultTickets * basePrice;
+    const childCost = childTickets * basePrice; // 30% discount for children
+
+    const servicesCost = services.reduce((sum, service) => {
+      if (selectedServices[service.name] && service.cost) {
+        // If cost is defined, use it
+        if (service.name.includes("couple")) {
+          // For per couple services, add cost once regardless of tickets
+          return sum + service.cost;
+        } else {
+          // For per head services, multiply by total people
+          return sum + service.cost * (adultTickets + childTickets);
+        }
+      }
+      return sum;
+    }, 0);
+
+    const total = adultCost + childCost + servicesCost;
+    setTotalCost(total);
+  }, [adultTickets, childTickets, selectedServices, basePrice]);
+
+  // Navigation handler
   const handleProceedToBook = () => {
     if (!checkIn) {
       alert("Please select a date before proceeding!");
       return;
     }
-    dispatch(setIsBookingClicked());
     router.push("/booking-page");
   };
 
-  // handler for opening date pick up after clicking
+  // Date picker handlers
   const handleIconClick = () => {
     setIsDatePickerOpen((prevState) => !prevState);
   };
 
-  // Handler for Date pick up
   const handleDateChange = (date: Date | null) => {
     if (date) {
-      dispatch(setCheckIn(date.toISOString()));
+      setCheckIn(date.toISOString());
     } else {
-      dispatch(setCheckIn(null));
+      setCheckIn(null);
     }
     setIsDatePickerOpen(false);
   };
 
-  // Service Data
-  const services = [
-    {
-      name: "Additional Guide",
-      state: additionalGuide,
-      action: toggleAdditionalGuide,
-    },
-    { name: "Internet", state: internet, action: toggleInternet },
-    { name: "Photography", state: photography, action: togglePhotography },
-  ];
+  // Service toggle handler
+  const toggleService = (serviceName: string) => {
+    setSelectedServices((prev) => ({
+      ...prev,
+      [serviceName]: !prev[serviceName],
+    }));
+  };
 
   return (
     <div className="it-discover-right">
@@ -100,15 +99,14 @@ const DetailsSidebar = ({ tour }: IProps) => {
                   <DatePicker
                     selected={checkIn ? new Date(checkIn) : null}
                     onChange={handleDateChange}
-                    onFocus={() => setIsDatePickerOpen(true)} // Open on focus of input
+                    onFocus={() => setIsDatePickerOpen(true)}
                     placeholderText="Select a Date"
                     dateFormat="dd/MM/yyyy"
                     className="form-control"
                     open={isDatePickerOpen}
-                    onClickOutside={() => setIsDatePickerOpen(false)} // Close when clicking outside
+                    onClickOutside={() => setIsDatePickerOpen(false)}
                   />
                 </span>
-
                 <div
                   className="it-discover-package-icon"
                   onClick={handleIconClick}
@@ -128,7 +126,7 @@ const DetailsSidebar = ({ tour }: IProps) => {
                   <span
                     className="it-cart-minus"
                     onClick={() =>
-                      dispatch(setAdultTickets(Math.max(0, adultTickets - 1)))
+                      setAdultTickets(Math.max(0, adultTickets - 1))
                     }
                   >
                     <MinusSvg />
@@ -141,34 +139,7 @@ const DetailsSidebar = ({ tour }: IProps) => {
                   />
                   <span
                     className="it-cart-plus"
-                    onClick={() => dispatch(setAdultTickets(adultTickets + 1))}
-                  >
-                    <PlusSvg />
-                  </span>
-                </div>
-              </div>
-              <div className="it-discover-passenger d-flex align-items-center justify-content-between">
-                <h3 className="it-discover-passenger-categories">
-                  Kids (13years)
-                </h3>
-                <div className="it-discover-passenger-quantity d-flex align-items-center">
-                  <span
-                    className="it-cart-minus"
-                    onClick={() =>
-                      dispatch(setKidTickets(Math.max(0, kidTickets - 1)))
-                    }
-                  >
-                    <MinusSvg />
-                  </span>
-                  <input
-                    className="it-cart-input"
-                    type="text"
-                    value={kidTickets}
-                    readOnly
-                  />
-                  <span
-                    className="it-cart-plus"
-                    onClick={() => dispatch(setKidTickets(kidTickets + 1))}
+                    onClick={() => setAdultTickets(adultTickets + 1)}
                   >
                     <PlusSvg />
                   </span>
@@ -182,7 +153,7 @@ const DetailsSidebar = ({ tour }: IProps) => {
                   <span
                     className="it-cart-minus"
                     onClick={() =>
-                      dispatch(setChildTickets(Math.max(0, childTickets - 1)))
+                      setChildTickets(Math.max(0, childTickets - 1))
                     }
                   >
                     <MinusSvg />
@@ -195,7 +166,7 @@ const DetailsSidebar = ({ tour }: IProps) => {
                   />
                   <span
                     className="it-cart-plus"
-                    onClick={() => dispatch(setChildTickets(childTickets + 1))}
+                    onClick={() => setChildTickets(childTickets + 1)}
                   >
                     <PlusSvg />
                   </span>
@@ -205,7 +176,7 @@ const DetailsSidebar = ({ tour }: IProps) => {
 
             <div className="it-discover-package-service mb-30">
               <h3 className="it-discover-service-title mb-35">
-                Additional Service
+                Additional Services
               </h3>
               {services.map((service, index) => (
                 <div
@@ -215,13 +186,17 @@ const DetailsSidebar = ({ tour }: IProps) => {
                   <div className="it-discover-service-checkbox d-flex align-items-center">
                     <input
                       type="checkbox"
-                      checked={service.state}
-                      onChange={() => dispatch(service.action())}
+                      style={{ minWidth: "25px" }}
+                      checked={selectedServices[service.name]}
+                      onChange={() => toggleService(service.name)}
+                      disabled={!service.cost}
                     />
                     <span>{service.name}</span>
                   </div>
-                  <div className="it-discover-service-price">
-                    <span>${serviceCost}</span>
+                  <div className="it-discover-service-price d-flex justify-content-end">
+                    <span style={{ maxWidth: "120px", textAlign: "end" }}>
+                      {service.serviceCost}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -229,7 +204,7 @@ const DetailsSidebar = ({ tour }: IProps) => {
 
             <div className="it-discover-package-total">
               <h3 className="it-discover-package-total-text mb-30">
-                Total Cost: <span>₹{totalCost.toFixed(2)}</span> / per person
+                Total Cost: <span>₹{totalCost.toFixed(2)}</span>
               </h3>
               <div className="it-discover-package-proceed">
                 <button
@@ -287,59 +262,8 @@ const DetailsSidebar = ({ tour }: IProps) => {
           </div>
         </div>
       </div>
-
-      {/* <div className="it-discover-deals">
-        <h3 className="it-discover-package-title">Last Minute Deals</h3>
-        <div className="it-discover-deals-box">
-          {tourPackagesDataThree
-            .map((item) => (
-              <div key={item.id} className="it-discover-deals-item">
-                <div className="it-discover-deals-content d-flex align-items-center">
-                  <div className="it-discover-deals-thumb">
-                    <a href="#">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        width={90}
-                        height={90}
-                        style={{ height: 'auto' }}
-                      />
-                    </a>
-                  </div>
-                  <div className="it-discover-deals-dsc">
-                    <div className="it-discover-deals-rating">
-                      <span>
-                        <i className="fa-solid fa-star"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-star"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-star"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-star"></i>
-                      </span>
-                      <span>
-                        <i className="fa-solid fa-star"></i>
-                      </span>
-                    </div>
-                    <h3 className="it-discover-deals-text">
-                      <Link href={`/tour-details/${item.id}`}>
-                        {item.title}
-                      </Link>
-                    </h3>
-                    <span className="it-discover-deals-price">
-                      From <span>${Math.round(updatePrice(item))}</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))
-            .slice(2, 5)}
-        </div>
-      </div> */}
     </div>
   );
 };
+
 export default DetailsSidebar;

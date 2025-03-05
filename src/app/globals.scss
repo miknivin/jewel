@@ -7,3 +7,11 @@
 @import 'node_modules/react-modal-video/scss/modal-video.scss';
 @import 'react-toastify/dist/ReactToastify.css';
 @import '../../public/assets/scss/main.scss';
+
+.it-discover-service-price {
+    word-wrap: break-word; /* Ensures long words break */
+    overflow-wrap: break-word; /* Alternative for compatibility */
+    white-space: normal; /* Allows text wrapping */
+    max-width: 100%; /* Prevents text from overflowing */
+  }
+  

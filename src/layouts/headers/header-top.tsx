@@ -66,7 +66,7 @@ const HeaderTop = () => {
                       <MailSvg />
                     </span>
                     <a href="mailto:skyfalljewel@gmail.com">
-                    skyfalljewel@gmail.com
+                      skyfalljewel@gmail.com
                     </a>
                   </li>
                   <li className="d-none d-xl-inline-block">
@@ -74,7 +74,7 @@ const HeaderTop = () => {
                       <LocationSvg />
                     </span>
                     <a href="https://www.google.com/maps">
-                      290 Grand AvenueMaitland, FL 32751
+                      Skyfall Jewel, Vellamkolly, Chundel, Wayanad
                     </a>
                   </li>
                 </ul>
@@ -131,17 +131,11 @@ const HeaderTop = () => {
                   </div>
                 </div> */}
                 <div className="it-header-top-right-social p-relative text-end">
-                  <a href="">
+                  <a href="https://www.facebook.com/share/15t2C5v9t5/?mibextid=wwXIfr">
                     <i className="fa-brands fa-facebook-f"></i>
                   </a>
-                  <a href="">
-                    <i className="fa-brands fa-twitter"></i>
-                  </a>
-                  <a href="">
-                    <i className="fa-brands fa-skype"></i>
-                  </a>
-                  <a href="">
-                    <i className="fa-brands fa-linkedin"></i>
+                  <a href="https://www.instagram.com/skyfalljewel?igsh=ZHE3Ymk1dTAzOW1h">
+                    <i className="fa-brands fa-instagram"></i>
                   </a>
                 </div>
               </div>
