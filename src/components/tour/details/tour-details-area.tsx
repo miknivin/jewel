@@ -8,6 +8,9 @@ import TourItemFour from "../tour-item/tour-item-four";
 import DetailsSidebar from "./details-sidebar";
 import { ITourDT } from "@/types/tour-packages-d-t";
 import { updatePrice } from "@/utils/helper";
+import packageImg1 from "@/assets/img/home-1/featured/img/img-1.webp";
+import packageImg2 from "@/assets/img/home-1/featured/img/img-2.webp";
+import packageImg3 from "@/assets/img/home-1/featured/img/img-3.webp";
 import {
   AirplaneSvg,
   CarSvg,
@@ -64,7 +67,7 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
                         <p>
                           From <br />
                           <span>
-                          ₹{Math.round(updatePrice(tour)).toFixed(2)}
+                            ₹{Math.round(updatePrice(tour)).toFixed(2)}
                           </span>
                           <br />
                           <small>per person</small>
@@ -125,7 +128,13 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
             </div>
             <div className="it-discover-thumb mb-30">
               <Image
-                src={tour.detailsImg}
+                src={
+                  tour.id === 1
+                    ? packageImg1
+                    : tour.id === 2
+                    ? packageImg2
+                    : packageImg3
+                }
                 alt=""
                 width={770}
                 height={451}
