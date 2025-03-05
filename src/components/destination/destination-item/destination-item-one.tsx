@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { IDestinationDT } from '@/types/destination-d-t';
+import Image from "next/image";
+import Link from "next/link";
+import { IDestinationDT } from "@/types/destination-d-t";
 
 interface DestinationItemProps {
   destination: IDestinationDT;
@@ -15,14 +15,12 @@ const DestinationItemOne = ({ destination }: DestinationItemProps) => {
           alt={destination.title}
           width={270}
           height={305}
-          style={{ height: 'auto' }}
+          style={{ height: "auto" }}
         />
       </div>
       <div className="it-destination-content">
         <h3 className="it-destination-title">
-          <Link href={`/destination-details/${destination.id}`}>
-            {destination.title}
-          </Link>
+          <div>{destination.title}</div>
         </h3>
         <span>{destination.tourCount} Tours</span>
       </div>

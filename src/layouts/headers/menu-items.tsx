@@ -87,7 +87,7 @@ const MenuItems = ({ isMobileMenu }: IProps) => {
             <Link href="/tour-details/1">Wayanad Wonder</Link>
             <Link href="/tour-details/2">Kerala Complete</Link>
             <Link href="/tour-details/3">Thailand Treasures</Link>
-            {/* <Link href="/booking-checkout">Booking Checkout</Link> */}
+            <Link href="/#">Munnar</Link>
           </li>
         </ul>
       </li>

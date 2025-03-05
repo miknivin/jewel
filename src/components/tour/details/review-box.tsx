@@ -12,23 +12,21 @@ const clientData = [
     avatar: avatarImg1,
     author: "Seno T Shaju ",
     publishedDate: "March 8, 2020",
-    description: `Skyfall Jewel Tours made my Dubai trip an absolute dream! From zooming through the desert on a safari to standing atop the Burj Khalifa, every moment felt special. The team was always available, ensuring a hassle-free and luxurious experience. Can't wait to book my next adventure with them!"*`,
+    description: `Our trip to Wayanad with Jewel Team was an unforgettable experience! The package was well-planned, covering all the must-visit spots like Edakkal Caves, Soochipara Falls, and Banasura Sagar Dam. The resort they arranged was cozy and surrounded by nature, making it perfect for a relaxing getaway. The team was highly professional, ensuring a smooth and hassle-free trip. Highly recommend Jewel Team for a stress-free Wayanad tour!*`,
   },
   {
     id: 2,
     avatar: avatarImg2,
     author: "Swathy Krishna",
     publishedDate: "January 21, 2022",
-    description: `From the moment I landed, everything was taken care of—stunning beach villas, island hopping, and the most beautiful snorkeling spots! Skyfall Jewel Tours made my Maldives trip effortless and unforgettable. I felt so pampered and stress-free. Definitely booking again!"`,
+    description: `Jewel Team provided an excellent tour package for our Wayanad trip. From pickup to drop-off, everything was perfectly organized. The resort was top-notch, with a beautiful view of the hills and amazing food. They customized the itinerary based on our preferences, and the guides were very friendly and knowledgeable. A wonderful experience that I’d definitely book again!`,
   },
   {
     id: 3,
     avatar: avatarImg3,
-    author: "Idhika Paul",
+    author: "Arun Ramachandran",
     publishedDate: "November 25, 2023",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. At volutpat diam ut venenatis tellus
-                    in metus. Sem et tortor consequat id porta. Et malesuada fames ac turpis egestas`,
+    description: `We booked our Wayanad tour through Jewel Team, and it was one of the best decisions we made! The tour included thrilling activities like trekking and boating, along with visits to breathtaking viewpoints. The resort stay was luxurious yet affordable, with excellent hospitality. The Jewel Team took care of every little detail, making our trip seamless and memorable. Highly recommend their services!`,
   },
 ];
 
@@ -62,7 +60,7 @@ const ReviewBox = () => {
                     </span>
                   </div>
                   <div className="it-discover-client-right">
-                    <div className="it-discover-client-notification d-flex align-items-center">
+                    {/* <div className="it-discover-client-notification d-flex align-items-center">
                       <span>Was this review helpful?</span>
                       <div className="it-discover-client-support d-flex align-items-center">
                         <div className="it-discover-client-support-icon">
@@ -78,7 +76,7 @@ const ReviewBox = () => {
                           <p>3</p>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="it-discover-client-review d-flex align-items-center">
@@ -181,7 +179,7 @@ const ReviewBox = () => {
           </div>
         ))}
       </div>
-      <h3 className="it-discover-title mb-25">Add a Comment</h3>
+      {/* <h3 className="it-discover-title mb-25">Add a Comment</h3>
       <span>Your email address will not be published.</span>
       <div className="it-discover-reviwe-box mb-30">
         <div className="row align-items-center">
@@ -310,7 +308,7 @@ const ReviewBox = () => {
         <div className="it-discover-review-form mt-30">
           <TourReviewForm />
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
