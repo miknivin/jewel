@@ -1,9 +1,9 @@
 import { ITourDT } from "@/types/tour-packages-d-t";
 
 import detailsImg from "@/assets/img/inner-page/discover/discover-1.jpg";
-import packageImg1 from "@/assets/img/home-1/featured/img/img-1.jpg";
-import packageImg2 from "@/assets/img/home-1/featured/img/img-2.jpg";
-import packageImg3 from "@/assets/img/home-1/featured/img/img-3.jpg";
+import packageImg1 from "@/assets/img/home-1/featured/img/img-1.webp";
+import packageImg2 from "@/assets/img/home-1/featured/img/img-2.webp";
+import packageImg3 from "@/assets/img/home-1/featured/img/img-3.webp";
 import packageImg4 from "@/assets/img/home-2/featured/thumb/f-2-1.jpg";
 import packageImg5 from "@/assets/img/home-2/featured/thumb/f-2-2.jpg";
 import packageImg6 from "@/assets/img/home-2/featured/thumb/f-2-3.jpg";
@@ -234,7 +234,7 @@ export const tourPackagesDataOne: ITourDT[] = [
   },
   {
     id: 3,
-    image: packageImg2,
+    image: packageImg3,
     title: "Thailand Treasures",
     price: 49999,
     badgeTitle: "10%",

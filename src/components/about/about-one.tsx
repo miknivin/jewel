@@ -3,9 +3,9 @@ import Link from "next/link";
 
 import shapeImg1 from "@/assets/img/home-1/about/shape/cloud.png";
 import shapeImg2 from "@/assets/img/home-1/about/shape/rocket.png";
-import aboutImg1 from "@/assets/img/home-1/about/img/img-1.jpg";
-import aboutImg2 from "@/assets/img/home-1/about/img/img-2.jpg";
-import aboutImg3 from "@/assets/img/home-1/about/img/img-3.jpg";
+import aboutImg1 from "@/assets/img/home-1/about/img/img-1.webp";
+import aboutImg2 from "@/assets/img/home-1/about/img/img-2.webp";
+import aboutImg3 from "@/assets/img/home-1/about/img/img-3.webp";
 
 const AboutOne = () => {
   return (

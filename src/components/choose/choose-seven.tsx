@@ -1,46 +1,39 @@
-import Image from 'next/image';
+import Image from "next/image";
 import {
   ChooseSvg1,
   ChooseSvg2,
   ChooseSvg3,
   ChooseSvg4,
   ChooseSvg5,
-} from '../svg';
+} from "../svg";
 
-import shapeImg from '@/assets/img/inner-page/chooseuse/inn-chooseus-shape.jpg';
-import chooseImg from '@/assets/img/inner-page/chooseuse/inn-chooseus1.jpg';
+import shapeImg from "@/assets/img/inner-page/chooseuse/inn-chooseus-shape.jpg";
+import chooseImg from "@/assets/img/inner-page/chooseuse/inn-chooseus1.webp";
 
 const chooseData = [
   [
     {
       id: 1,
       icon: <ChooseSvg1 />,
-      title: 'Amazing Tour Plans',
+      title: "Amazing Tour Plans",
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do..',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do..",
     },
     {
       id: 2,
       icon: <ChooseSvg2 />,
-      title: 'Best Travel Guide',
+      title: "Best Travel Guide",
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do..',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do..",
     },
   ],
   [
     {
       id: 3,
       icon: <ChooseSvg3 />,
-      title: 'Easy Booking Options',
+      title: "Easy Booking Options",
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do..',
-    },
-    {
-      id: 4,
-      icon: <ChooseSvg4 />,
-      title: 'World Insurance Included',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do..',
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do..",
     },
   ],
 ];
@@ -65,11 +58,13 @@ const ChooseSeven = () => {
               <div className="it-chooseus-title-box mb-30">
                 <span className="it-section-subtitle">What we do</span>
                 <h3 className="it-section-title mb-20">
-                Creating Journeys Beyond  <br />
-                The Ordinary Path
+                  Creating Journeys Beyond <br />
+                  The Ordinary Path
                 </h3>
                 <p>
-                We specialise in personalised travel experiences, luxury and budget accommodations, transportation solutions, and memorable event management across India and international destinations.
+                  We specialise in personalised travel experiences, luxury and
+                  budget accommodations, transportation solutions, and memorable
+                  event management across India and international destinations.
                 </p>
               </div>
               <div className="row">
@@ -90,7 +85,7 @@ const ChooseSeven = () => {
                           <h3 className="it-about-service-title">
                             {item.title}
                           </h3>
-                          <p>{item.description}</p>
+                          {/* <p>{item.description}</p> */}
                         </div>
                       </div>
                     ))}
@@ -107,7 +102,7 @@ const ChooseSeven = () => {
                   alt="Choose Img"
                   width={581}
                   height={700}
-                  style={{ height: 'auto' }}
+                  style={{ height: "auto" }}
                 />
               </div>
             </div>

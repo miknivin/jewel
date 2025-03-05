@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import ModalVideo from 'react-modal-video';
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import ModalVideo from "react-modal-video";
 
-import shapeImg1 from '@/assets/img/home-1/video/shape/tree.png';
-import shapeImg2 from '@/assets/img/home-1/video/shape/triangle.png';
+import shapeImg1 from "@/assets/img/home-1/video/shape/tree.png";
+import shapeImg2 from "@/assets/img/home-1/video/shape/triangle.png";
 
 interface IProps {
   btnClass?: string;
@@ -32,7 +32,7 @@ const VideoOne = ({ btnClass }: IProps) => {
     <div
       className="it-video-area it-video-overlay p-relative pt-95 pb-95"
       style={{
-        backgroundImage: `url('/assets/img/home-1/video/img/video-bg.jpg')`,
+        backgroundImage: `url('/assets/img/home-1/video/img/video-bg.webp')`,
       }}
     >
       <ModalVideo
@@ -48,7 +48,7 @@ const VideoOne = ({ btnClass }: IProps) => {
             alt="Shape Img"
             width={420}
             height={389}
-            style={{ height: 'auto' }}
+            style={{ height: "auto" }}
           />
         </div>
         <div className="it-video-shape-2">
@@ -57,7 +57,7 @@ const VideoOne = ({ btnClass }: IProps) => {
             alt="Shape Img"
             width={455}
             height={400}
-            style={{ height: 'auto' }}
+            style={{ height: "auto" }}
           />
         </div>
       </div>
@@ -71,7 +71,7 @@ const VideoOne = ({ btnClass }: IProps) => {
               <div className="it-video-button">
                 <Link
                   href="/contact"
-                  className={btnClass ? btnClass : 'it-btn-secondary'}
+                  className={btnClass ? btnClass : "it-btn-secondary"}
                 >
                   Start Booking
                 </Link>

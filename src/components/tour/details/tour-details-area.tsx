@@ -99,7 +99,7 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="col-xl-4">
+                {/* <div className="col-xl-4">
                   <div className="it-discover-cat-social">
                     <ul>
                       <li>
@@ -112,15 +112,15 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
                           <i className="fa-solid fa-star"></i> Reviews
                         </a>
                       </li>
-                      {/* <li>
+                      <li>
                         <a href="#">
                           <i className="fa-sharp fa-solid fa-heart"></i>{' '}
                           WISHLIST
                         </a>
-                      </li> */}
+                      </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="it-discover-thumb mb-30">

@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import ReactPaginate from 'react-paginate';
-import TourItemFour from './tour-item/tour-item-four';
-import { tourPackagesDataThree } from '@/data/tour-packages-data';
-
+import { useState } from "react";
+import ReactPaginate from "react-paginate";
+import TourItemFour from "./tour-item/tour-item-four";
+import { tourPackagesDataThree } from "@/data/tour-packages-data";
+import { tourPackagesDataOne } from "@/data/tour-packages-data";
 const TourList = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 6; // Define the number of items per page
@@ -28,14 +28,14 @@ const TourList = () => {
       <div className="container">
         <div className="it-featured-item-wrap">
           <div className="row">
-            {currentTours.map((tour) => (
+            {tourPackagesDataOne.map((tour) => (
               <div key={tour.id} className="col-xl-4 col-lg-6 col-md-6">
                 <TourItemFour tour={tour} />
               </div>
             ))}
           </div>
         </div>
-        <div className="row">
+        {/* <div className="row">
           <div className="col-xl-12">
             <div className="it-pagination">
               <ReactPaginate
@@ -50,7 +50,7 @@ const TourList = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

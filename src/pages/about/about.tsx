@@ -4,6 +4,7 @@ import ChooseSeven from "@/components/choose/choose-seven";
 import Newsletter from "@/components/newsletter/newsletter";
 import TestimonialFive from "@/components/testimonial/testimonial-five";
 import TourFive from "@/components/tour/tour-five";
+import VideoOne from "@/components/video/video-one";
 import VideoTwo from "@/components/video/video-two";
 import FooterOne from "@/layouts/footers/footer-one";
 import HeaderOne from "@/layouts/headers/header-one";
@@ -19,7 +20,7 @@ const AboutMain = () => {
 
         <AboutFour />
 
-        <VideoTwo />
+        <VideoOne />
 
         <TourFive />
 

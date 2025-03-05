@@ -1,29 +1,29 @@
-import Image from 'next/image';
-import Counter from '../funfact/counter-item/counter-item';
-import { AboutShapeOne, AboutShapeTwo, RightArrow } from '../svg';
+import Image from "next/image";
+import Counter from "../funfact/counter-item/counter-item";
+import { AboutShapeOne, AboutShapeTwo, RightArrow } from "../svg";
 
-import aboutImg1 from '@/assets/img/inner-page/about/inner-ab-1-1.jpg';
-import aboutImg2 from '@/assets/img/inner-page/about/inner-ab-1-2.jpg';
-import aboutImg3 from '@/assets/img/inner-page/about/inner-ab-1-3.jpg';
+import aboutImg1 from "@/assets/img/inner-page/about/inner-ab-1-1.webp";
+import aboutImg2 from "@/assets/img/inner-page/about/inner-ab-1-2.webp";
+import aboutImg3 from "@/assets/img/inner-page/about/inner-ab-1-3.webp";
 
 const counterData = [
   {
     id: 1,
     countNum: 100,
-    countSubtext: '+',
-    countTitle: 'Our Explorers',
+    countSubtext: "+",
+    countTitle: "Our Explorers",
   },
   {
     id: 2,
     countNum: 25,
-    countSubtext: '+',
-    countTitle: 'Destinations',
+    countSubtext: "+",
+    countTitle: "Destinations",
   },
   {
     id: 3,
     countNum: 5,
-    countSubtext: '+',
-    countTitle: 'Years experience',
+    countSubtext: "+",
+    countTitle: "Years experience",
   },
 ];
 
@@ -41,7 +41,7 @@ const AboutFour = () => {
                     alt="About Img"
                     width={222}
                     height={222}
-                    style={{ height: 'auto' }}
+                    style={{ height: "auto" }}
                   />
                 </div>
                 <div className="it-about-thumb-2">
@@ -50,7 +50,7 @@ const AboutFour = () => {
                     alt="About Img"
                     width={335}
                     height={385}
-                    style={{ height: 'auto' }}
+                    style={{ height: "auto" }}
                   />
                 </div>
               </div>
@@ -64,7 +64,7 @@ const AboutFour = () => {
                   className="mb-30"
                   width={270}
                   height={278}
-                  style={{ height: 'auto' }}
+                  style={{ height: "auto" }}
                 />
                 <div className="it-about-experience p-relative">
                   <div className="it-about-experience-icon">
@@ -75,7 +75,7 @@ const AboutFour = () => {
                   <h3 className="it-about-experience-number">
                     <Counter
                       start={0}
-                      end={29}
+                      end={5}
                       duration={3}
                       counterSubText="+"
                     />
@@ -89,11 +89,13 @@ const AboutFour = () => {
             <div className="it-about-title-box mb-30">
               <span className="it-section-subtitle">about us</span>
               <h2 className="it-section-title mb-20">
-              Adventure Awaits, 
-              Experience Calls
+                Adventure Awaits, Experience Calls
               </h2>
               <p>
-              Since 2020, Skyfall Jewel Tours & Travels has transformed ordinary journeys into extraordinary memories through personalized itineraries, seamless logistics, and authentic experiences across India and beyond.
+                Since 2020, Skyfall Jewel Tours & Travels has transformed
+                ordinary journeys into extraordinary memories through
+                personalized itineraries, seamless logistics, and authentic
+                experiences across India and beyond.
               </p>
             </div>
             <div className="it-about-counter-box mb-20">

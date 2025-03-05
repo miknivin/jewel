@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { ITourDT } from '@/types/tour-packages-d-t';
-import { updatePrice } from '@/utils/helper';
+import Image from "next/image";
+import Link from "next/link";
+import { ITourDT } from "@/types/tour-packages-d-t";
+import { updatePrice } from "@/utils/helper";
 
 interface TourItemProps {
   tour: ITourDT;
@@ -16,14 +16,9 @@ const TourItemFour = ({ tour }: TourItemProps) => {
           alt={tour.title}
           width={370}
           height={250}
-          style={{ height: 'auto' }}
+          style={{ height: "auto" }}
         />
         <div className="it-featured-content">
-          <div className="it-featured-meta mb-5">
-            <a href="https://www.google.com/maps">
-              <i className="fa-solid fa-location-dot"></i> {tour.address}
-            </a>
-          </div>
           <h3 className="it-featured-title">
             <Link href={`/tour-details/${tour.id}`}>{tour.title}</Link>
           </h3>
@@ -31,8 +26,8 @@ const TourItemFour = ({ tour }: TourItemProps) => {
             <div className="it-featured-price d-flex align-items-center">
               <i className="fa-regular fa-circle-dollar"></i>
               <p>
-                From <span>${Math.round(updatePrice(tour)).toFixed(2)}</span>{' '}
-                {tour.badgeTitle && <del>${tour.price.toFixed(2)}</del>}
+                From <span>₹{Math.round(updatePrice(tour)).toFixed(2)}</span>{" "}
+                {tour.badgeTitle && <del>₹{tour.price.toFixed(2)}</del>}
               </p>
             </div>
             <div className="it-featured-review d-flex align-items-center">
@@ -57,7 +52,7 @@ const TourItemFour = ({ tour }: TourItemProps) => {
         )}
       </div>
       <div className="it-featured-react-box z-index">
-        <div className="it-featured-react">
+        {/* <div className="it-featured-react">
           <button>
             <span>
               <i className="fa-light fa-heart"></i>
@@ -77,7 +72,7 @@ const TourItemFour = ({ tour }: TourItemProps) => {
               <i className="fa-regular fa-video"></i>
             </span>
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

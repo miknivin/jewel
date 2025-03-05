@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Counter from '../funfact/counter-item/counter-item';
 
 import shapeImg from '@/assets/img/home-1/chooseus/shape/walk.png';
-import chooseImg from '@/assets/img/home-1/chooseus/img/choose-thumb.jpg';
+import chooseImg from '@/assets/img/home-1/chooseus/img/choose-thumb.webp';
 
 const chooseData = [
   {
