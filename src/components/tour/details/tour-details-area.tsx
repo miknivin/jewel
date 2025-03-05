@@ -212,7 +212,9 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
             </div>
             <h3 className="it-discover-title mb-25">Tour Plans</h3>
             <div className="it-discover-acordian mb-30">
-              {tour.tourPlans && <TourDetailsFaq faqData={tour.tourPlans} />}
+              {tour.id !== 3 && tour.tourPlans && (
+                <TourDetailsFaq faqData={tour.tourPlans} />
+              )}
             </div>
             <h3 className="it-discover-title mb-35">Review Scores</h3>
             {/* <div className="it-discover-review-area mb-30">

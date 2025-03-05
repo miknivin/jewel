@@ -25,8 +25,8 @@ export const tourPackagesDataOne: ITourDT[] = [
     price: 6999,
     badgeTitle: "10%",
     address: "traford Park Lexington,40507",
-    rating: "4.8",
-    review: "1.6",
+    rating: "4.9",
+    review: "1.8",
     tourType: "Adventure",
     duration: "3 Days 2 Nights",
     travelerCount: 15,
@@ -118,7 +118,7 @@ export const tourPackagesDataOne: ITourDT[] = [
     tourType: "Family",
     address: "traford Park Lexington,40507",
     rating: "4.8",
-    review: "1.6",
+    review: "2.6",
     duration: "3 Days 2 Nights",
     travelerCount: 15,
     detailsImg: detailsImg,
@@ -235,17 +235,17 @@ export const tourPackagesDataOne: ITourDT[] = [
   {
     id: 3,
     image: packageImg3,
-    title: "Thailand Treasures",
-    price: 49999,
+    title: "Munnar escape",
+    price: 49500,
     badgeTitle: "10%",
     tourType: "Adventure",
     address: "traford Park Lexington,40507",
-    rating: "4.8",
-    review: "1.6",
-    duration: "5 Days 4 Nights",
+    rating: "4.5",
+    review: "1.9",
+    duration: "4 Days 3 Nights",
     travelerCount: 15,
     detailsImg: detailsImg,
-    description: `Uncover Thailand’s vibrant charm with Skyfall Jewel Tours & Travels. This 5-day journey takes you from Bangkok’s bustling streets to Phuket’s pristine shores. Explore grand temples, hop across stunning islands, master Thai cooking, and shop at floating markets. With 4-star stays, flight assistance, and visa support, this adventure package promises a seamless blend of culture, relaxation, and excitement for thrill-seekers.
+    description: `Embark on a breathtaking 4-day Munnar escape with Skyfall Jewel Tours & Travels. Experience misty hills, sprawling tea gardens, and cascading waterfalls in Kerala’s most beloved hill station. Stay in cozy resorts, visit Eravikulam National Park, take a spice plantation tour, and enjoy scenic viewpoints. With seamless transportation and customizable stay options, this package is perfect for nature lovers and adventure seekers alike.
 `,
     progresses: [
       { title: "Service", value: "98%" },
@@ -255,60 +255,58 @@ export const tourPackagesDataOne: ITourDT[] = [
     ],
     advanceContent: [
       {
-        title: "Bangkok’s Bustling Beauty",
+        title: "A Tranquil Retreat",
         description: `
-      Tour the Grand Palace and iconic temples like Wat Arun. Dive into Bangkok’s vibrant nightlife and markets, soaking in Thailand’s rich urban culture. 
+    Discover Munnar’s charm with visits to Mattupetty Dam, Echo Point, and tea museums. Enjoy authentic Kerala cuisine and explore the vibrant markets filled with local crafts and flavors.
       `,
       },
       {
-        title: "Island Paradise Awaits",
+        title: "Nature & Adventure Awaits",
         description: `
-      Island-hop in Phuket and visit Phi Phi Islands. Swim in turquoise waters, relax on white sands, and enjoy Thailand’s tropical allure at its finest. 
+      Trek through lush trails, capture stunning waterfalls, and visit Periyar Lake for a serene boat ride. Whether you seek relaxation or adventure, this tour offers the perfect balance for an unforgettable getaway
       `,
       },
     ],
     amenities: [
       {
-        title: "4-star accommodation",
+        title: "Luxury or budget accommodation",
         icon: CheckMarkSvg,
       },
       {
-        title: "International/domestic flight assistance",
+        title: "Scenic tea plantation stays",
         icon: CheckMarkSvg,
       },
       {
-        title: "Breakfast daily",
+        title: "All internal transportation",
         icon: CheckMarkSvg,
       },
       {
-        title: "Guided city and island tours",
+        title: "Daily breakfast and dinner",
         icon: CheckMarkSvg,
       },
       {
-        title: "Thai cooking class",
+        title: "Entry tickets to key attractions",
         icon: CheckMarkSvg,
       },
       {
-        title: "Visa processing support",
+        title: "Guided tours at major landmarks",
         icon: CheckMarkSvg,
       },
       {
-        title: "Private taxi services",
+        title: "Adventure activities and nature walks",
         icon: CheckMarkSvg,
       },
     ],
     included: [
-      "Airport pick and drop",
-      "Breakfast each day",
-      "Bangkok city tour",
-      "Phi Phi Islands excursion",
+      "Pick up from Cochin",
+      "Drop at Cochin",
+      "Breakfast",
+      "Dinner/candlelight dinner",
+      "Campfire",
+      "Swimming pool",
+      "Sightseeing",
     ],
-    excluded: [
-      "Additional water sports",
-      "Travel insurance",
-      "Lunch and dinner",
-      "Shopping expenses",
-    ],
+    excluded: ["Lunch", "Ticket charges", "Extra foods"],
     tourPlans: [
       {
         uuid: uuidv4(),
