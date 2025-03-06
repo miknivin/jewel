@@ -86,8 +86,8 @@ const MenuItems = ({ isMobileMenu }: IProps) => {
           <li>
             <Link href="/tour-details/1">Wayanad Wonder</Link>
             <Link href="/tour-details/2">Kerala Complete</Link>
-            <Link href="/tour-details/3">Thailand Treasures</Link>
-            <Link href="/#">Munnar</Link>
+            {/* <Link href="/tour-details/3">Thailand Treasures</Link> */}
+            <Link href="/tour-details/3">Munnar</Link>
           </li>
         </ul>
       </li>

@@ -228,7 +228,7 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
             <h3 className="it-discover-title mb-35">Location</h3>
             <div className="it-discover-maps mb-35">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d121914.86196405679!2d-74.07886878452959!3d40.72084424392851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1713501285528!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31254.688732964874!2d76.06670704474377!3d11.706019064300664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba60aca72a6f31d%3A0x80f9947968021a09!2sWayanad%2C%20Kerala!5e0!3m2!1sen!2sin!4v1741264644924!5m2!1sen!2sin"
                 style={{ border: "0" }}
                 allowFullScreen
                 loading="lazy"

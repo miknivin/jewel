@@ -10,6 +10,7 @@ import FooterOne from "@/layouts/footers/footer-one";
 import HeaderOne from "@/layouts/headers/header-one";
 import HeaderTwo from "@/layouts/headers/header-two";
 import Wrapper from "@/layouts/wrapper";
+import footerLogo from "@/assets/img/logo/light-logo.png";
 
 const AboutMain = () => {
   return (
@@ -31,7 +32,7 @@ const AboutMain = () => {
         <Newsletter itemClass="it-newsletter-area it-newsletter-height fix p-relative theme-bg" />
       </main>
 
-      <FooterOne />
+      <FooterOne footerLogo={footerLogo} />
     </Wrapper>
   );
 };
