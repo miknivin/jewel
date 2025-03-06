@@ -5,6 +5,7 @@ import destinationImg2 from "@/assets/img/home-1/destination/img/img-2.webp";
 import destinationImg3 from "@/assets/img/home-1/destination/img/img-3.webp";
 import destinationImg4 from "@/assets/img/home-1/destination/img/img-4.webp";
 import destinationImgkashmir from "@/assets/img/home-1/destination/img/img-5.webp";
+import destinationImgMunnar from "@/assets/img/home-1/destination/img/img-6.webp";
 import destinationImg5 from "@/assets/img/home-2/destination/d-1-1.jpg";
 import destinationImg6 from "@/assets/img/home-2/destination/d-1-2.jpg";
 import destinationImg7 from "@/assets/img/home-2/destination/d-1-3.jpg";
@@ -60,6 +61,13 @@ export const destinationDataOne: IDestinationDT[] = [
     id: 5,
     image: destinationImgkashmir,
     title: "Kashmir",
+    tourCount: "Heaven on Earth",
+    detailsImg: detailsImg,
+  },
+  {
+    id: 6,
+    image: destinationImgMunnar,
+    title: "Munnar",
     tourCount: "Heaven on Earth",
     detailsImg: detailsImg,
   },

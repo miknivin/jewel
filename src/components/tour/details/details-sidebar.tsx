@@ -18,7 +18,9 @@ interface IProps {
 const DetailsSidebar = ({ tour }: IProps) => {
   const [isDatePickerOpen, setIsDatePickerOpen] = useState<boolean>(false);
   const [checkIn, setCheckIn] = useState<string | null>(null);
-  const [adultTickets, setAdultTickets] = useState<number>(1);
+  const [adultTickets, setAdultTickets] = useState<number>(
+    tour.id === 3 ? 2 : 1
+  );
   const [childTickets, setChildTickets] = useState<number>(0);
   const [selectedServices, setSelectedServices] = useState<{
     [key: string]: boolean;
@@ -32,28 +34,35 @@ const DetailsSidebar = ({ tour }: IProps) => {
 
   // Calculate total cost
   useEffect(() => {
-    console.log(tour.price, "price");
+    let adjustedAdultCost = adultTickets * basePrice;
 
-    const adultCost = adultTickets * basePrice;
-    const childCost = childTickets * basePrice; // 30% discount for children
+    if (tour.id === 3 && adultTickets > 2) {
+      adjustedAdultCost =
+        2 * basePrice + Math.floor((adultTickets - 2) / 2) * basePrice;
+    }
+
+    const childCost = childTickets * basePrice;
 
     const servicesCost = services.reduce((sum, service) => {
       if (selectedServices[service.name] && service.cost) {
-        // If cost is defined, use it
         if (service.name.includes("couple")) {
-          // For per couple services, add cost once regardless of tickets
           return sum + service.cost;
         } else {
-          // For per head services, multiply by total people
-          return sum + service.cost * (adultTickets + childTickets);
+          return (
+            sum +
+            service.cost *
+              (tour.id === 3
+                ? (adultTickets + childTickets) / 2
+                : adultTickets + childTickets)
+          );
         }
       }
       return sum;
     }, 0);
 
-    const total = adultCost + childCost + servicesCost;
+    const total = adjustedAdultCost + childCost + servicesCost;
     setTotalCost(total);
-  }, [adultTickets, childTickets, selectedServices, basePrice]);
+  }, [adultTickets, childTickets, selectedServices, basePrice, tour.price]);
 
   // Navigation handler
   const handleProceedToBook = () => {
@@ -126,7 +135,11 @@ const DetailsSidebar = ({ tour }: IProps) => {
                   <span
                     className="it-cart-minus"
                     onClick={() =>
-                      setAdultTickets(Math.max(0, adultTickets - 1))
+                      setAdultTickets(
+                        adultTickets > (tour.id === 3 ? 2 : 1)
+                          ? adultTickets - (tour.id === 3 ? 2 : 1)
+                          : adultTickets
+                      )
                     }
                   >
                     <MinusSvg />
@@ -139,39 +152,43 @@ const DetailsSidebar = ({ tour }: IProps) => {
                   />
                   <span
                     className="it-cart-plus"
-                    onClick={() => setAdultTickets(adultTickets + 1)}
-                  >
-                    <PlusSvg />
-                  </span>
-                </div>
-              </div>
-              <div className="it-discover-passenger d-flex align-items-center justify-content-between">
-                <h3 className="it-discover-passenger-categories">
-                  Children (5+years)
-                </h3>
-                <div className="it-discover-passenger-quantity d-flex align-items-center">
-                  <span
-                    className="it-cart-minus"
                     onClick={() =>
-                      setChildTickets(Math.max(0, childTickets - 1))
+                      setAdultTickets(adultTickets + (tour.id === 3 ? 2 : 1))
                     }
                   >
-                    <MinusSvg />
-                  </span>
-                  <input
-                    className="it-cart-input"
-                    type="text"
-                    value={childTickets}
-                    readOnly
-                  />
-                  <span
-                    className="it-cart-plus"
-                    onClick={() => setChildTickets(childTickets + 1)}
-                  >
                     <PlusSvg />
                   </span>
                 </div>
               </div>
+              {tour.id !== 3 && (
+                <div className="it-discover-passenger d-flex align-items-center justify-content-between">
+                  <h3 className="it-discover-passenger-categories">
+                    Children (5+years)
+                  </h3>
+                  <div className="it-discover-passenger-quantity d-flex align-items-center">
+                    <span
+                      className="it-cart-minus"
+                      onClick={() =>
+                        setChildTickets(Math.max(0, childTickets - 1))
+                      }
+                    >
+                      <MinusSvg />
+                    </span>
+                    <input
+                      className="it-cart-input"
+                      type="text"
+                      value={childTickets}
+                      readOnly
+                    />
+                    <span
+                      className="it-cart-plus"
+                      onClick={() => setChildTickets(childTickets + 1)}
+                    >
+                      <PlusSvg />
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="it-discover-package-service mb-30">
@@ -204,7 +221,13 @@ const DetailsSidebar = ({ tour }: IProps) => {
 
             <div className="it-discover-package-total">
               <h3 className="it-discover-package-total-text mb-30">
-                Total Cost: <span>₹{totalCost.toFixed(2)}</span>
+                Total Cost:{" "}
+                <span>
+                  ₹
+                  {tour.id === 3
+                    ? (totalCost - 45000).toFixed(2)
+                    : totalCost.toFixed(2)}
+                </span>
               </h3>
               <div className="it-discover-package-proceed">
                 <button

@@ -70,7 +70,9 @@ const TourDetailsArea = ({ tour }: TourDetailsProps) => {
                             ₹{Math.round(updatePrice(tour)).toFixed(2)}
                           </span>
                           <br />
-                          <small>per person</small>
+                          <small>
+                            {tour.id === 3 ? "Per Couple" : "Per Person"}
+                          </small>
                         </p>
                       </div>
                     </div>

@@ -9,7 +9,10 @@ interface DestinationItemProps {
 const DestinationItemOne = ({ destination }: DestinationItemProps) => {
   return (
     <div className="it-destination-item p-relative">
-      <div className="it-destination-thumb">
+      <div
+        style={{ height: "305px", overflow: "hidden" }}
+        className="it-destination-thumb "
+      >
         <Image
           src={destination.image}
           alt={destination.title}

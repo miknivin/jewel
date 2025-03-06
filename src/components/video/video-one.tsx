@@ -79,11 +79,15 @@ const VideoOne = ({ btnClass }: IProps) => {
             </div>
           </div>
           <div className="col-xl-5 col-lg-3">
-            <div className="it-video-icon z-index justify-content-start justify-content-md-end align-items-center">
-              <Link href="#" className="popup-video" onClick={handleLinkClick}>
+            {/* <div className="it-video-icon z-index justify-content-start justify-content-md-end align-items-center">
+              <Link
+                href="#"
+                className="popup-video"
+                 onClick={handleLinkClick}
+              >
                 <i className="fa-solid fa-play"></i>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

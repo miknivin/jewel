@@ -236,7 +236,7 @@ export const tourPackagesDataOne: ITourDT[] = [
     id: 3,
     image: packageImg3,
     title: "Munnar escape",
-    price: 49500,
+    price: 50000,
     badgeTitle: "10%",
     tourType: "Adventure",
     address: "traford Park Lexington,40507",
