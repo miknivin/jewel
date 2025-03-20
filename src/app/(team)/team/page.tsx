@@ -1,8 +1,8 @@
-import { Metadata } from 'next';
-import TeamMain from '@/pages/team/team';
+import { Metadata } from "next";
+import TeamMain from "@/pages/team/team";
 
 export const metadata: Metadata = {
-  title: 'Travello - Team Page',
+  title: "Jewels - Team Page",
 };
 
 const TeamPage = () => {

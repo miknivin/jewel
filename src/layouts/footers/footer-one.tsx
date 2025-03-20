@@ -54,7 +54,7 @@ const FooterOne = ({
                     <Image
                       style={{ objectFit: "cover" }}
                       src={footerLogo ? footerLogo : Logo}
-                      alt="Travello"
+                      alt="Jewels"
                       width={129}
                       height={40}
                     />
