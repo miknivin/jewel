@@ -1,8 +1,8 @@
-import { Metadata } from 'next';
-import AboutMain from '@/pages/about/about';
+import { Metadata } from "next";
+import AboutMain from "@/pages/about/about";
 
 export const metadata: Metadata = {
-  title: 'Jewels - About Page',
+  title: "Jewel - About Page",
 };
 
 const AboutPage = () => {

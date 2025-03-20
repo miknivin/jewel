@@ -1,9 +1,9 @@
-import { Metadata } from 'next';
-import { tourPackagesData } from '@/data/tour-packages-data';
-import TourDetailsMain from '@/pages/tour-details/tour-details';
+import { Metadata } from "next";
+import { tourPackagesData } from "@/data/tour-packages-data";
+import TourDetailsMain from "@/pages/tour-details/tour-details";
 
 export const metadata: Metadata = {
-  title: 'Jewels - Tour Details Page',
+  title: "Jewel - Tour Details Page",
 };
 
 export default function TourDetailsPage({

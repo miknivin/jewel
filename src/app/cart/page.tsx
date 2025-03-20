@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import CartMain from "@/pages/cart/cart";
 
 export const metadata: Metadata = {
-  title: "Jewels - Cart Page",
+  title: "Jewel - Cart Page",
 };
 
 const CartPage = () => {

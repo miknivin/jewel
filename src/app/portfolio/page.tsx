@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import PortfolioMain from "@/pages/portfolio/portfolio";
 
 export const metadata: Metadata = {
-  title: "Jewels - Portfolio Page",
+  title: "Jewel - Portfolio Page",
 };
 
 const PortfolioPage = () => {

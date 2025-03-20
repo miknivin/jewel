@@ -66,7 +66,7 @@ const HeaderOne = ({ hasTopBar, hasTopBarTwo, headerClass }: HeaderProps) => {
                     <Link href="/">
                       <Image
                         src={Logo}
-                        alt="Jewels"
+                        alt="Jewel"
                         width={129}
                         height={50}
                         style={{ objectFit: "cover" }}

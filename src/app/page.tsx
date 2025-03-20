@@ -1,8 +1,8 @@
-import { Metadata } from 'next';
-import HomeOnePage from './(homes)/home-1/page';
+import { Metadata } from "next";
+import HomeOnePage from "./(homes)/home-1/page";
 
 export const metadata: Metadata = {
-  title: 'Jewels - Home Page',
+  title: "Jewel - Home Page",
 };
 
 export default function Home() {

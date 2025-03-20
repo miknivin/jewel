@@ -63,7 +63,7 @@ const HeaderTwo = ({ headerLogo }: HeaderProps) => {
                     <Link href="/">
                       <Image
                         src={headerLogo ? headerLogo : Logo}
-                        alt="Jewels"
+                        alt="Jewel"
                         width={129}
                         height={40}
                       />

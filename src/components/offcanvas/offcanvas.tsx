@@ -27,7 +27,7 @@ const OffCanvas = ({ isOffCanvasOpen, setIsOffCanvasOpen }: IProps) => {
           </div>
           <div className="itoffcanvas__logo">
             <Link href="/">
-              <Image src={Logo} alt="Jewels" width={129} height={40} />
+              <Image src={Logo} alt="Jewel" width={129} height={40} />
             </Link>
           </div>
           <div className="itoffcanvas__text">

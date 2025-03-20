@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import TestimonialMain from "@/pages/testimonial/testimonial";
 
 export const metadata: Metadata = {
-  title: "Jewels - Testimonial Page",
+  title: "Jewel - Testimonial Page",
 };
 
 const TestimonialPage = () => {

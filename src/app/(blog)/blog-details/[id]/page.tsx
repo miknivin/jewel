@@ -3,7 +3,7 @@ import { blogData } from "@/data/blog-data";
 import BlogDetailsMain from "@/pages/blog-details/blog-details";
 
 export const metadata: Metadata = {
-  title: "Jewels - Blog Details Page",
+  title: "Jewel - Blog Details Page",
 };
 
 export default function BlogDetailsPage({

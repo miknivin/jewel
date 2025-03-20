@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import CompareMain from "@/pages/compare/compare";
 
 export const metadata: Metadata = {
-  title: "Jewels - Compare Page",
+  title: "Jewel - Compare Page",
 };
 
 const ComparePage = () => {

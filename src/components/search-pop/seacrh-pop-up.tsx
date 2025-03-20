@@ -24,7 +24,7 @@ const SearchPopUp = ({ isPopUpOpen, setIsPopUpOpen }: SearchProps) => {
                   <Link href="/">
                     <Image
                       src={LogoWhite}
-                      alt="Jewels"
+                      alt="Jewel"
                       width={129}
                       height={40}
                     />
